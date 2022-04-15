@@ -1,0 +1,12 @@
+public/
+styles/
+test-fixtures/
+node_modules/
+stories/
+package.json
+package-lock.json
+tsconfig.json
+.eslintrc.json
+.prettierrc
+next.config.js
+README.md
