@@ -1,0 +1,8 @@
+overwrite: true
+schema: "https://dev.peddlesoft.com/graphql"
+documents: "graphql/**/*.js"
+generates:
+  types/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"

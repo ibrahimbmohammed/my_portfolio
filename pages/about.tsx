@@ -4,12 +4,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import HomeWrapper from '@hoc/home-wrapper';
 import { AllDataQueryQuery } from '@gentypes/index';
-import Button from '@atoms/button';
 import styles from '../styles/Home.module.css';
 
-function Home() {
+function About() {
     const [resData, setResData] = useState<AllDataQueryQuery>();
-    async function ApCall() {
+    // TODO : make this a function, params: url, setFunc, toast
+    async function ApiCall() {
         try {
             if (typeof window !== 'undefined') {
                 const response = await fetch('/api/main');
@@ -23,7 +23,7 @@ function Home() {
     }
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            ApCall();
+            ApiCall();
         }
     }, []);
 
@@ -37,11 +37,11 @@ function Home() {
 
             <main className={styles.main}>
                 <h1 className="text-indigo-500">
-                    {resData?.orgConference?.theme} <a href="https://nextjs.org">Next.js!</a>
+                    {resData?.orgConference?.name} <a href="https://nextjs.org">Next.js!</a>
                 </h1>
 
-                <p className="text-secondaryColor">
-                    Get started by editing <code className={styles.code}>pages/index.tsx</code>
+                <p className="bg-secondaryColor">
+                    About Page <code className={styles.code}>pages/index.tsx</code>
                 </p>
 
                 <div className={styles.grid}>
@@ -62,7 +62,7 @@ function Home() {
                         <h2>Examples &rarr;</h2>
                         <p>Discover and deploy boilerplate example Next.js projects.</p>
                     </a>
-                    <Button btnType="primary" type="button" label="Button" />
+
                     <a
                         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                         className={styles.card}
@@ -89,4 +89,4 @@ function Home() {
     );
 }
 
-export default HomeWrapper(Home);
+export default HomeWrapper(About);

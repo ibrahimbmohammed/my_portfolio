@@ -15,6 +15,7 @@ module.exports = {
     plugins: ['react', '@typescript-eslint'],
     rules: {
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
+        'import/no-unresolved': [2, { caseSensitive: false }],
         'import/no-extraneous-dependencies': [
             'error',
             {
@@ -25,13 +26,23 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['pages/**/*.tsx', 'stories/**/*.tsx'],
+            files: [
+                'pages/**/*.tsx',
+                'pages/api/*.ts',
+                'stories/**/*.tsx',
+                'components/**/*.tsx',
+                'hoc/**/*.tsx',
+                'store/**/*.tsx',
+            ],
             rules: {
+                'import/no-unresolved': 'off',
                 'react/jsx-props-no-spreading': 'off',
                 'react/function-component-definition': 'off',
-                'import/no-unresolved': 'off',
                 'import/extensions': 'off',
                 'react/require-default-props': 'off',
+                'no-undef': 'off',
+                'arrow-body-style': 'off',
+                'import/extensions ': 'off',
             },
         },
     ],

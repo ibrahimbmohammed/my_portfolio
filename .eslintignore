@@ -5,6 +5,7 @@ node_modules/
 stories/
 .next/
 .storybook/
+types/generated
 package.json
 package-lock.json
 tsconfig.json

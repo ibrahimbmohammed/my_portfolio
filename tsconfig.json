@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "ES2017", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "es2020",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -26,15 +26,18 @@
       "@store/*": ["store/slices/*"],
       "@store": ["store"],
       "@constants": ["constants"],
-      "@types": ["types"],
+      "@types/*": ["types/*"],
+      "@gentypes/*": ["types/generated/*"],
       "@hooks": ["hooks"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@hoc/*": ["hoc/*"],
       "@assets/*": ["assets/*"],
+      "@apolloClient": ["apolloClient"],
+      "@graphql/*": ["graphql/*"],
       "@layout/*": ["components/layout/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "theme/utils.js"],
   "exclude": ["node_modules"]
 }
