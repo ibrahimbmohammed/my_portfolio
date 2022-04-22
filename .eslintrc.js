@@ -31,7 +31,7 @@ module.exports = {
                 'pages/api/*.ts',
                 'stories/**/*.tsx',
                 'components/**/*.tsx',
-                'hoc/**/*.tsx',
+                'lib/hoc/**/*.tsx',
                 'store/**/*.tsx',
             ],
             rules: {

@@ -37,7 +37,7 @@ function About() {
 
             <main className={styles.main}>
                 <h1 className="text-indigo-500">
-                    {resData?.orgConference?.name} <a href="https://nextjs.org">Next.js!</a>
+                    {resData?.orgConference?.photoUrl} <a href="https://nextjs.org">Next.js!</a>
                 </h1>
 
                 <p className="bg-secondaryColor">

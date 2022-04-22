@@ -5,7 +5,7 @@ import { AllDataQueryQuery, AllDataQueryQueryVariables } from '@gentypes/index';
 import getClient from '../../apolloClient';
 
 async function getDomainData(req: NextApiRequest, res: NextApiResponse) {
-    const host: string | undefined = 'localhost.com';
+    const { host } = req.headers;
     const finalhost = domainNameBasedOnEnv(host as string);
     const client = getClient;
     const result = await client.query<AllDataQueryQuery, AllDataQueryQueryVariables>({

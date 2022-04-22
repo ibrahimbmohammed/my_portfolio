@@ -1,7 +1,7 @@
 import '../styles/globals.css';
+
 import * as NextImage from 'next/image';
 
-// Allow Storybook to handle Next's <Image> component
 const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, 'default', {

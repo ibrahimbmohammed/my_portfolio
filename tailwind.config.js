@@ -39,7 +39,8 @@ module.exports = {
             },
         },
         fontFamily: {
-            Poppins: ['Poppins, sans-serif'],
+            theme: "'Montserrat', sans-serif",
+            Theme: 'var(--font-name), var(--font-family)',
         },
         container: {
             center: true,

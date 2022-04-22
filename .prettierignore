@@ -10,5 +10,7 @@ package-lock.json
 tsconfig.json
 .eslintrc.json
 .prettierrc
+output.gql
+codegen.yml
 next.config.js
 README.md
