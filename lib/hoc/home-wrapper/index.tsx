@@ -1,33 +1,12 @@
 import type { NextPageContext } from 'next';
 import Head from 'next/head';
-import { getCookie, setCookie } from '@utils/cookies';
-import { WebsiteAboutPagesQuery } from '@gentypes/index';
-import { applyTheme } from '@lib/theme/utils';
+import { applyThemeFunc } from '@utils/helpers';
+import Navbar from '@molecules/navbar';
 
 function withWrapper(WrappedComponent: any) {
     // TODO : make this a function, params: url, setFunc, toast
     // after the first query, we can store the theme data anywhere
-    async function ApiCall() {
-        try {
-            if (typeof window !== 'undefined') {
-                const themeData = getCookie('theme');
-                if (themeData === undefined || themeData === null) {
-                    const response = await fetch('/api/theme');
-                    const data: WebsiteAboutPagesQuery = await response.json();
-                    applyTheme(data as string);
-                    const websiteTheme = JSON.stringify(data);
-                    setCookie('theme', websiteTheme as string);
-                } else if (themeData) {
-                    const localWebsiteTheme = JSON.parse(themeData as string);
-                    applyTheme(localWebsiteTheme);
-                }
-            }
-        } catch (e) {
-            // usually toast the error as a message
-            console.log('error', e);
-        }
-    }
-    ApiCall();
+    applyThemeFunc();
 
     const withThing = (props: any) => {
         return (
@@ -39,17 +18,17 @@ function withWrapper(WrappedComponent: any) {
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap"
                         rel="stylesheet"
                     />
                 </Head>
 
-                <nav className="h-8 w-full flex items-center justify-center">
-                    {' '}
-                    <p className="font-semibold text-red-600">nav</p>{' '}
-                </nav>
+                <Navbar />
                 <WrappedComponent {...props} />
-                <footer className="h-8 w-full flex items-center justify-center">
+                <footer
+                    style={{ marginTop: '100vh' }}
+                    className="h-8 w-full  flex items-center justify-center"
+                >
                     <p className="font-semibold text-blue-600">footer</p>
                 </footer>
             </div>
@@ -57,8 +36,8 @@ function withWrapper(WrappedComponent: any) {
     };
 
     withThing.getInitialProps = async ({ req }: NextPageContext) => {
-        const userAgent = req?.headers.host;
-        return { userAgent };
+        const host = req?.headers;
+        return { host };
     };
 
     return withThing;

@@ -6,7 +6,8 @@ module.exports = {
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
-        './hoc/**/*.{js,ts,jsx,tsx}',
+        './lib/hoc/**/*.{js,ts,jsx,tsx}',
+        './lib/layout/**/*.{js,ts,jsx,tsx}',
         './stories/**/*.{js,ts,jsx,tsx}',
     ],
     darkMode: false, // or 'media' or 'class'
@@ -31,11 +32,14 @@ module.exports = {
                 98: '24.5 rem',
                 100: '25rem',
                 104: '26rem',
-                120: '30rem',
-                140: '35rem',
+                106: '28rem',
+                108: '30rem',
+                110: '34rem',
             },
             screens: {
                 '1xl': '1440px',
+                '1.5xl': '1500px',
+                '3xl': '1700px',
             },
         },
         fontFamily: {
