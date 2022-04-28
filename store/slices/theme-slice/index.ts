@@ -3,7 +3,7 @@
 /* eslint-disable no-param-reassign */
 import type { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
-import type { WebsiteAboutPagesQuery } from '../../../types/generated';
+import type { WebsiteAboutPagesQuery } from '@gentypes/index';
 
 interface Theme {
     theme: WebsiteAboutPagesQuery;

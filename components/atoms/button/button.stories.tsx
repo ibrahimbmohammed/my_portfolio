@@ -6,7 +6,10 @@ export default {
     title: 'atom/Button',
     component: Button,
     argTypes: {
-        backgroundColor: { control: 'color' },
+        btnType: {
+            options: ['primary', 'secondary'],
+            control: { type: 'radio' },
+        },
     },
 } as ComponentMeta<typeof Button>;
 
