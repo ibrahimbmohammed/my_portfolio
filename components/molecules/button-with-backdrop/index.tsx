@@ -8,7 +8,7 @@ const ButtonWithBackdrop = ({ className }: ButtonWithBackdropProps) => {
     return (
         <div className={className}>
             <CallToActionBackDrop>
-                <Button btnType="primary" type="button" label="Button" />
+                <Button btnType="primary" type="button" label="Register" />
             </CallToActionBackDrop>
         </div>
     );

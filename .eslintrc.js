@@ -32,6 +32,7 @@ module.exports = {
                 'stories/**/*.tsx',
                 'components/**/*.tsx',
                 'lib/hoc/**/*.tsx',
+                'lib/layout/**/*.tsx',
                 'store/**/*.tsx',
             ],
             rules: {

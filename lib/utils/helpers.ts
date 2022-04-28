@@ -1,6 +1,10 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 import { NO_HOSTNAME, parseDomain } from 'parse-domain';
+import { getCookie, setCookie } from '@utils/cookies';
+import { WebsiteAboutPagesQuery } from '@gentypes/index';
+import { applyTheme } from '@lib/theme/utils';
 
 export const passwordMatch = (password1: string, password2: string) => {
     if (password1 !== password2) {
@@ -106,6 +110,77 @@ export function domainNameBasedOnEnv(url: string) {
 
     return hostname;
 }
+
+export const applyThemeFunc = async () => {
+    try {
+        if (typeof window !== 'undefined') {
+            const themeData = getCookie('theme');
+            if (themeData === undefined || themeData === null) {
+                const response = await fetch('/api/theme');
+                const data: WebsiteAboutPagesQuery = await response.json();
+                applyTheme(data as string);
+                const websiteTheme = JSON.stringify(data);
+                setCookie('theme', websiteTheme as string);
+            } else if (themeData) {
+                console.log('error', 'theme');
+                const localWebsiteTheme = JSON.parse(themeData as string);
+                applyTheme(localWebsiteTheme);
+            }
+        }
+    } catch (e) {
+        // usually toast the error as a message
+        console.log('error', e);
+    }
+};
+
+export const aboutInfoFunc = (path: string) => {
+    const actualRoute = path.split('/')[1];
+    switch (actualRoute) {
+        case 'about':
+            return {
+                title: 'About Us',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+        case 'leadership':
+            return {
+                title: 'Leadership',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+        case 'chapters':
+            return {
+                title: 'Our Chapters',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+        case 'events':
+            return {
+                title: 'Events',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+        case 'publlication':
+            return {
+                title: 'Our Publications',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+        case 'faq':
+            return {
+                title: 'FAQs',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+
+        default:
+            return {
+                title: 'About Us',
+                description:
+                    'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
+            };
+    }
+};
 
 export const imageNullChecker = (localImage: { src: string }, dynamicImage: string) => {
     const imageUrl = `${process.env.NEXT_PUBLIC_PHOTO_URL}/${dynamicImage}`;

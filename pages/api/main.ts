@@ -21,9 +21,9 @@ async function getDomainData(req: NextApiRequest, res: NextApiResponse) {
         throw result.error ?? result.data;
     }
 
-    const { orgConference } = result.data;
+    const { orgConference, website, websiteBannerSliderImages, threeTopmostEvents } = result.data;
 
-    res.status(200).json({ orgConference });
+    res.status(200).json({ orgConference, website, websiteBannerSliderImages, threeTopmostEvents });
 }
 
 export default getDomainData;
