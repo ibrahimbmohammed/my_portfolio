@@ -32,7 +32,7 @@ const routesItems: Route[] = [
             { title: 'FAQ', link: '/faq' },
         ],
     },
-    { title: 'Library', link: '/library' },
+    { title: 'Library', link: '/publications' },
     { title: 'Training', link: `/training` },
     { title: 'Contact Us', link: '/contact_us' },
     { title: 'Login', link: `/login` },

@@ -160,7 +160,7 @@ export const aboutInfoFunc = (path: string) => {
                 description:
                     'The Nigerian Institution of Water Engineers (NIWE) is a division of The Nigerian Society of Engineers (NSE) whose objective among others is to serve as an umbrella body for Engineers from water related discipline.',
             };
-        case 'publlication':
+        case 'publications':
             return {
                 title: 'Our Publications',
                 description:

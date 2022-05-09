@@ -1,6 +1,6 @@
 interface ButtonProps {
     btnType?: 'primary' | 'secondary';
-    label: string;
+    label?: string;
     type: 'button' | 'submit';
     className?: string;
     onClick?: () => void;

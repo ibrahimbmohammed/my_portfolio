@@ -13,3 +13,19 @@
   --font-name: 'Montserrat'
 }
 
+@layer components {
+    .section-margin {
+      @apply px-14 py-5
+    }
+}
+
+@layer base {
+    html {
+      @apply overflow-x-hidden overscroll-y-auto;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+

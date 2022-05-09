@@ -2,6 +2,7 @@ import type { NextPageContext } from 'next';
 import Head from 'next/head';
 import { applyThemeFunc } from '@utils/helpers';
 import Navbar from '@molecules/navbar';
+import Footer from '@molecules/footer';
 
 function withWrapper(WrappedComponent: any) {
     // TODO : make this a function, params: url, setFunc, toast
@@ -24,13 +25,10 @@ function withWrapper(WrappedComponent: any) {
                 </Head>
 
                 <Navbar />
-                <WrappedComponent {...props} />
-                <footer
-                    style={{ marginTop: '100vh' }}
-                    className="h-8 w-full  flex items-center justify-center"
-                >
-                    <p className="font-semibold text-blue-600">footer</p>
-                </footer>
+                <main className="min-h-[100vh]">
+                    <WrappedComponent {...props} />
+                </main>
+                <Footer />
             </div>
         );
     };

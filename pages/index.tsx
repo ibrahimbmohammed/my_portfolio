@@ -1,45 +1,30 @@
 // import type { NextPage } from 'next';
-import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import HomeWrapper from '@hoc/home-wrapper';
 import { AllDataQueryQuery } from '@gentypes/index';
 import ButtonWithBackdrop from '@molecules/button-with-backdrop';
 import Image from '@hoc/next-base-image';
+import useFetchQuery from '@lib/hooks/fetch-query';
 import dayjs from 'dayjs';
 import { GoCalendar, GoLocation } from 'react-icons/go';
+
 import Button from '@atoms/button';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
-import BackImage from '../public/assets/png/intersects.png';
+import BackImage from '@assets/png/intersects.png';
+
+import EdgeImage from '@assets/svg/edge-styles.svg';
 
 const backImage = 'https://peddlesoft.com///media/NIWE/website/Carousel_1_fJTV5AK.jpg';
 const conferenceImage = 'https://peddlesoft.com///media/events/New_Niwe_Conference.jpeg';
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 function Home() {
-    const [resData, setResData] = useState<AllDataQueryQuery>();
+    const [resData] = useFetchQuery<AllDataQueryQuery>('/api/main');
     const partners = resData?.website?.org?.sponsorSet?.edges;
-
-    async function ApCall() {
-        try {
-            if (typeof window !== 'undefined') {
-                const response = await fetch('/api/main');
-                const data: AllDataQueryQuery = await response.json();
-                setResData({ ...data });
-            }
-        } catch (e) {
-            // usually toast the error as a message
-            console.log('error', e);
-        }
-    }
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            ApCall();
-        }
-    }, []);
 
     return (
         <div className="mt-2 container">
@@ -81,7 +66,7 @@ function Home() {
                 }}
             >
                 <div className="w-full md:w-[50%] flex flex-col ">
-                    <div className="flex px-4 md:px-10 flex-col space-y-4 ">
+                    <div className="flex section-margin flex-col space-y-4 ">
                         <p className="text-secondaryText mt-3 font-semibold">{`UPCOMING CONFERENCES ${dayjs(
                             resData?.orgConference?.endDate,
                         ).format('YYYY')}`}</p>
@@ -135,11 +120,11 @@ function Home() {
                     <Image src={conferenceImage} layout="fixed" height={1100} width={800} />
                 </div>
             </section>
-            <section className=" h-[calc(100vh_-_10rem)] w-full flex py-6">
+            <section className=" h-[calc(100vh_-_10rem)] w-full flex py-6 relative">
                 <div className="flex flex-col items-center w-full container">
                     <div className="flex justify-between  w-full h-full">
-                        <div className=" p-16 md:w-1/2 ">
-                            <p className="font-bold">__About Us</p>
+                        <div className=" section-margin md:w-1/2 ">
+                            <p className="font-bold">__About Us </p>
                             <p className="text-primaryColor font-semibold text-2xl">
                                 NIWE we strive for ...
                             </p>
@@ -167,6 +152,15 @@ function Home() {
                     </div>
                     <Button type="button" btnType="primary" label="Register" />
                 </div>
+                <div className="absolute right-0">
+                    <Image
+                        className=""
+                        src={EdgeImage.src}
+                        layout="fixed"
+                        height={80}
+                        width={200}
+                    />
+                </div>
             </section>
             <section
                 className=" h-[calc(100vh_-_10rem)] w-full flex flex-col bg-primaryColor"
@@ -175,7 +169,7 @@ function Home() {
                 //     opacity: '65%',
                 // }}
             >
-                <div className="flex flex-col">
+                <div className=" section-margin flex flex-col">
                     <p className="text-secondaryText">EVENTS</p>
                     <p className="text-secondaryText mt-3 font-semibold">{`UPCOMING NEW EVENTS ${dayjs(
                         resData?.orgConference?.endDate,
@@ -265,10 +259,6 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <footer className="bg-primaryColor flex h-[calc(100vh_-_10rem)] ">
-                {/* <div className=""></div>
-                <div className=""></div> */}
-            </footer>
         </div>
     );
 }
