@@ -1,19 +1,19 @@
-import EventCard from '@molecules/event-card';
+// import EventCard from '@molecules/event-card';
 // import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import AboutLayout from '@lib/layout/page-layout/about-layout';
 import { AllDataQueryQuery } from '@gentypes/index';
 
-const publications = [
-    {
-        question: 'who we are',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec, pellentesque bibendum odio.  Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non.',
-    },
-    {
-        question: 'who we are',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec, pellentesque bibendum odio.  Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non.',
-    },
-];
+// const publications = [
+//     {
+//         question: 'who we are',
+//         answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec, pellentesque bibendum odio.  Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non.',
+//     },
+//     {
+//         question: 'who we are',
+//         answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec, pellentesque bibendum odio.  Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non.',
+//     },
+// ];
 
 function Events() {
     const [resData, setResData] = useState<AllDataQueryQuery>();
@@ -47,9 +47,9 @@ function Events() {
                     </ul>
                 </div>
                 <div className="grid grid-cols-2 gap-x-8">
-                    {publications.map(() => (
+                    {/* {publications.map(() => (
                         <EventCard />
-                    ))}
+                    ))} */}
                     <div className="">hello</div>
                 </div>
             </div>
