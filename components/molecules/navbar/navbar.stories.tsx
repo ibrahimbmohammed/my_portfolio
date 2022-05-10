@@ -1,18 +1,16 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import CallToActionBackdrop from './index';
+import Navbar from './index';
 
 export default {
     title: 'molecules/Navbar',
-    component: CallToActionBackdrop,
+    component: Navbar,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof CallToActionBackdrop>;
+} as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof CallToActionBackdrop> = (args) => (
-    <CallToActionBackdrop {...args} />
-);
+const Template: ComponentStory<typeof Navbar> = () => <Navbar />;
 
 export const Primary = Template.bind({});
 
