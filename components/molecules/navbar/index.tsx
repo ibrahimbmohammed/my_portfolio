@@ -4,9 +4,9 @@ import Transition from '@hoc/transition-wrapper';
 import NavbarItem from '@atoms/nav-item';
 import { UrlObject } from 'url';
 
-// interface NavBarProps {
-//     className?: string;
-// }
+interface NavBarProps {
+    className?: string;
+}
 
 declare type Url = string | UrlObject;
 
@@ -39,7 +39,7 @@ const routesItems: Route[] = [
     { title: 'Register', link: '/register' },
 ];
 
-function Navbar() {
+function Navbar({ className }: NavBarProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [isSubOpen, setIsSubOpen] = useState(false);
 
@@ -47,7 +47,9 @@ function Navbar() {
         setIsSubOpen(!isSubOpen);
     };
     return (
-        <nav className=" shadow-none md:shadow-sm drop-shadow-xl  sticky sm:top-0 bg-white w-full z-20">
+        <nav
+            className={`shadow-none md:shadow-sm drop-shadow-xl  sticky sm:top-0 bg-white w-full z-20 ${className}`}
+        >
             <div className="w-full">
                 <div className="flex flex-col space-y-2 md:space-y-0  md:flex-row items-center h-20 w-full">
                     <div className="flex items-center space-x-[10rem]   mx-20   w-full">
@@ -64,6 +66,7 @@ function Navbar() {
                                             return null;
                                         return (
                                             <NavbarItem
+                                                key={item.title}
                                                 link={item.link}
                                                 title={item.title}
                                                 submenu={item.submenu}
@@ -79,6 +82,7 @@ function Navbar() {
                                         if (item.title === 'Login' || item.title === 'Register') {
                                             return (
                                                 <NavbarItem
+                                                    key={item.title}
                                                     link={item.link}
                                                     title={item.title}
                                                     submenu={item.submenu}
@@ -145,6 +149,7 @@ function Navbar() {
                         {routesItems.map((item: Route) => {
                             return (
                                 <NavbarItem
+                                    key={item.title}
                                     link={item.link}
                                     title={item.title}
                                     submenu={item.submenu}

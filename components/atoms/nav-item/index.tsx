@@ -22,7 +22,7 @@ const NavItem = ({ open, link, title, submenu, toggleSubMenu }: NavItemProps) =>
                     href={link as Url}
                     className="text-sm  cursor-pointer "
                     activeClassName="text-primaryColor font-bold"
-                    key={21}
+                    key={title}
                 >
                     <p className="">{title}</p>
                 </Link>
@@ -37,7 +37,7 @@ const NavItem = ({ open, link, title, submenu, toggleSubMenu }: NavItemProps) =>
                 } transition-all delay-150 ease-in-out overflow-hidden  space-y-2 md:space-y-3 md:drop-shadow-lg md:px-3  md:absolute  md:mt-0 md:top-[2rem] rounded-md bg-white w-[8rem]`}
             >
                 {submenu.map((item) => (
-                    <DropDownItem link={item?.link} title={item?.title} />
+                    <DropDownItem key={item?.title} link={item?.link} title={item?.title} />
                 ))}
             </div>
         </div>
@@ -46,7 +46,7 @@ const NavItem = ({ open, link, title, submenu, toggleSubMenu }: NavItemProps) =>
             href={link as Url}
             className="text-sm cursor-pointer"
             activeClassName=" text-primaryColor font-bold "
-            key={21}
+            key={title}
         >
             <p className="">{title}</p>
         </Link>
