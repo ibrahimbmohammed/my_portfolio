@@ -22,6 +22,7 @@
     "@headlessui/react": "^1.5.0",
     "@reduxjs/toolkit": "^1.8.1",
     "@types/js-cookie": "^3.0.1",
+    "@types/ramda": "^0.28.12",
     "apollo-link": "^1.2.14",
     "apollo-link-error": "^1.1.13",
     "apollo-upload-client": "^17.0.0",
@@ -30,6 +31,7 @@
     "js-cookie": "^3.0.1",
     "next": "12.1.5",
     "parse-domain": "^7.0.0",
+    "ramda": "^0.28.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-icons": "^4.3.1",
@@ -39,7 +41,8 @@
     "redux-persist": "^6.0.0",
     "storybook-addon-next": "^1.6.2",
     "storybook-addon-next-router": "^3.1.1",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.4",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

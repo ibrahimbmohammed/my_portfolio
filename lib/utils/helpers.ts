@@ -133,6 +133,19 @@ export const applyThemeFunc = async () => {
     }
 };
 
+export function getValidationErrors(err: any) {
+    const validationErrors = {};
+
+    err.inner.forEach((error: any) => {
+        if (error.path) {
+            /* @ts-ignore */
+            validationErrors[error.path] = error.message;
+        }
+    });
+
+    return validationErrors;
+}
+
 export const aboutInfoFunc = (path: string) => {
     const actualRoute = path.split('/')[1];
     switch (actualRoute) {

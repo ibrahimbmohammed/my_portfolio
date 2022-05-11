@@ -10,6 +10,8 @@ const StorybookNextImage: React.FC<ImageProps> = (props) => (
         }}
     />
 );
-export const NextImage = isStorybook ? NextBaseImage : (StorybookNextImage as typeof NextBaseImage);
+export const NextImage = !isStorybook
+    ? NextBaseImage
+    : (StorybookNextImage as typeof NextBaseImage);
 
 export default NextImage;

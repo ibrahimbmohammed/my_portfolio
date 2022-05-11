@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import Toast from '@utils/toast';
 
 function useFetchQuery<T>(url: string) {
