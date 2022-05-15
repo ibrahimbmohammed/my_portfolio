@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Toast from '@utils/toast';
 
-function useFetchQuery<T>(url: string) {
+const useFetchQuery = <T,>(url: string) => {
     const [resData, setResData] = useState<T>();
 
     async function ApiCall() {
@@ -19,6 +19,6 @@ function useFetchQuery<T>(url: string) {
         ApiCall();
     }, []);
     return [resData];
-}
+};
 
 export default useFetchQuery;

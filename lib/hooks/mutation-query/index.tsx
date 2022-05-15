@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Toast from '@utils/toast';
 
 // eslint-disable-next-line no-unused-vars
-function useMutation<T, Q>(): [T, (url: string, data: Q) => Promise<T | undefined> | undefined] {
+const useMutation = <T, Q>(): [T, (url: string, data: Q) => Promise<T | undefined> | undefined] => {
     const [resData, setResData] = useState<T>();
 
     async function ApiCall(url: string, data: Q) {
@@ -26,6 +26,6 @@ function useMutation<T, Q>(): [T, (url: string, data: Q) => Promise<T | undefine
     }
 
     return [resData as T, (url: string, data: Q) => ApiCall(url, data)];
-}
+};
 
 export default useMutation;

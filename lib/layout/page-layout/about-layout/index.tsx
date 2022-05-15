@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import backImage from '@assets/png/Rectangleback.png';
-import NavbarItem from '@atoms/nav-item';
+import NavbarItem from '@atoms/a-nav-item';
 import HomeWrapper from '@hoc/home-wrapper';
 import { useRouter } from 'next/router';
 import { applyThemeFunc, aboutInfoFunc } from '@utils/helpers';

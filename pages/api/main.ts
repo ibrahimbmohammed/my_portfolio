@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getAllDomainData } from '@graphql/Query';
 import { domainNameBasedOnEnv } from '@utils/helpers';
 import { AllDataQueryQuery, AllDataQueryQueryVariables } from '@gentypes/index';
-import getClient from '../../apolloClient';
+import getClient from 'apolloClient';
 
 async function getDomainData(req: NextApiRequest, res: NextApiResponse) {
     const { host } = req.headers;
