@@ -31,7 +31,7 @@ const LeadershipCard = ({ id, name, bio, photoUrl, position }: LeadershipCardPro
                 <p className="font-semibold text-primaryColor text-xl line-clamp-2">{name}</p>
                 <p className="font-thin text-sm">{position?.position}</p>
                 <p className="text-xs text-justify line-clamp-5">
-                    {bio?.substring(0, 50).concat('..')}
+                    <span className="min-h-[12rem]">{bio?.substring(0, 50).concat('..')}</span>
                 </p>
                 <Link href={`/directors/${id}`}>
                     <p className="font-bold self-end  text-[0.5rem] text-primaryColor">
