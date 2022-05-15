@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { SIGNIN_USER } from '@graphql/Mutation';
 import { LoginUserMutation, LoginUserMutationVariables } from '@gentypes/index';
-import getClient from '../../apolloClient';
+import getClient from 'apolloClient';
 
 async function getDomainData(req: NextApiRequest, res: NextApiResponse) {
     const { username, password }: LoginUserMutationVariables = req.body;

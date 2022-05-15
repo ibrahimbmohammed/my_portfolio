@@ -6,7 +6,7 @@ import { AllDataQueryQuery } from '@gentypes/index';
 import trainingPlaceHolder from '@assets/png/trainingPlaceHolder.png';
 import { BiCheck } from 'react-icons/bi';
 import { FaShare } from 'react-icons/fa';
-import Button from '@atoms/button';
+import Button from '@atoms/a-button';
 
 function TrainingSingle() {
     const [resData, setResData] = useState<AllDataQueryQuery>();

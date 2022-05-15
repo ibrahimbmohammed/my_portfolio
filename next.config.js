@@ -12,6 +12,7 @@ const nextConfig = {
             'media.istockphoto.com',
             '127.0.0.1',
             'www.pngall.com',
+            'www.seekpng.com'
         ],
     },
 };

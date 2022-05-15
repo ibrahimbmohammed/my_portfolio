@@ -1,8 +1,8 @@
 import type { NextPageContext } from 'next';
 import Head from 'next/head';
 import { applyThemeFunc } from '@utils/helpers';
-import Navbar from '@molecules/navbar';
-import Footer from '@molecules/footer';
+import Navbar from '@molecules/m-navbar';
+import Footer from '@molecules/m-footer';
 
 function withWrapper(WrappedComponent: any) {
     // TODO : make this a function, params: url, setFunc, toast

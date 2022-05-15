@@ -29,9 +29,11 @@ module.exports = {
             files: [
                 'pages/**/*.tsx',
                 'pages/api/*.ts',
+                'pages/api/**/*.ts',
                 'stories/**/*.tsx',
                 'components/**/*.tsx',
                 'lib/**/**/*.tsx',
+                'lib/layout/**/**/*.tsx',
                 'store/**/*.tsx',
             ],
             rules: {

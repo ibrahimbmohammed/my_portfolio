@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import TrainingLayout from '@lib/layout/page-layout/training-layout';
 import Image from '@hoc/next-base-image';
 // import HomeWrapper from '@hoc/home-wrapper';
-import CurrencySvg from '@atoms/currency-svg';
+import CurrencySvg from '@atoms/a-currency-svg';
 import { AllDataQueryQuery } from '@gentypes/index';
 import trainingPlaceHolder from '@assets/png/trainingPlaceHolder.png';
 import { GoCalendar } from 'react-icons/go';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import dayjs from 'dayjs';
-import Button from '@atoms/button';
+import Button from '@atoms/a-button';
 
 function Training() {
     const [resData, setResData] = useState<AllDataQueryQuery>();

@@ -1,5 +1,5 @@
 import backImage from '@assets/png/trainingBg.png';
-import NavbarItem from '@atoms/nav-item';
+import NavbarItem from '@atoms/a-nav-item';
 import HomeWrapper from '@hoc/home-wrapper';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 

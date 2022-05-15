@@ -1,61 +1,36 @@
-// import EventCard from '@molecules/event-card';
-// import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import AboutLayout from '@lib/layout/page-layout/about-layout';
-import { AllDataQueryQuery } from '@gentypes/index';
+import AboutUiLayout from '@lib/layout/ui-layout/about-layout';
+import { DashboardAllEventsDataListQuery } from '@gentypes/index';
+import useFetchQuery from '@lib/hooks/fetch-query';
+import SideNavBar from '@molecules/m-sidebar-navigator';
+import EventsPaginatedGrid from '@organisms/o-grid-paginated-events';
 
-// const publications = [
-//     {
-//         question: 'who we are',
-//         answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec, pellentesque bibendum odio.  Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non.',
-//     },
-//     {
-//         question: 'who we are',
-//         answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec, pellentesque bibendum odio.  Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius eleifend enim non.',
-//     },
-// ];
-
-function Events() {
-    const [resData, setResData] = useState<AllDataQueryQuery>();
-    // TODO : make this a function, params: url, setFunc, toast
-    async function ApiCall() {
-        try {
-            const response = await fetch('/api/main');
-            const data: AllDataQueryQuery = await response.json();
-            setResData({ ...data });
-        } catch (e) {
-            // usually toast the error as a message
-            console.log('error', e);
-        }
-    }
-    console.log('error', resData);
+const Events = () => {
+    const [eventData] = useFetchQuery<DashboardAllEventsDataListQuery>('/api/events');
+    const initialData = eventData?.eventCategoryList?.edges[0];
+    const [eventStateData, setEventData] = useState<typeof initialData>();
+    const [currentIndex, setCurrentIndex] = useState(0);
     useEffect(() => {
-        ApiCall();
-    }, []);
+        setEventData(initialData ?? eventStateData);
+    }, [eventData]);
+
+    const handleChange = (node: typeof initialData, index: number) => {
+        setEventData(node);
+        setCurrentIndex(index);
+    };
 
     return (
-        <section className="flex flex-col pb-8">
-            <div className="px-12 py-8">
-                <p className="font-extrabold">__Get Updated</p>
-                <p className="text-primaryColor font-semibold text-2xl">Events</p>
-            </div>
-            <div className="flex  items-start space-x-[8rem] px-12">
-                <div className="bg-[#F3FAF9] min-w-[20rem] rounded-md">
-                    <ul className="pl-3 py-4 space-y-8 text-sm ">
-                        <li className="">All</li>
-                        <li className="">ICEPT</li>
-                    </ul>
-                </div>
-                <div className="grid grid-cols-2 gap-x-8">
-                    {/* {publications.map(() => (
-                        <EventCard />
-                    ))} */}
-                    <div className="">hello</div>
-                </div>
-            </div>
-        </section>
+        <AboutUiLayout headText="__Get Updated" subText="Events" className="">
+            <SideNavBar
+                handleChange={handleChange}
+                data={eventData?.eventCategoryList?.edges}
+                currentIndex={currentIndex}
+            />
+            <EventsPaginatedGrid pageData={eventStateData} />
+        </AboutUiLayout>
     );
-}
+};
 
 Events.PageLayout = AboutLayout;
 

@@ -1,91 +1,37 @@
-// import type { NextPage } from 'next';
+import type { GetDirectorsQueryQuery } from '@gentypes/index';
 import { useState, useEffect } from 'react';
 import AboutLayout from '@lib/layout/page-layout/about-layout';
-import Image from '@hoc/next-base-image';
-// import HomeWrapper from '@hoc/home-wrapper';
-import { AllDataQueryQuery } from '@gentypes/index';
-import humanPlaceHolder from '@assets/png/humanplaceholder.png';
-// import styles from '../styles/Home.module.css';
+import AboutUiLayout from '@lib/layout/ui-layout/about-layout';
+import SideNavBar from '@molecules/m-sidebar-navigator';
+import LeadersPaginatedGrid from '@organisms/o-grid-paginated-leadership';
+import useFetchQuery from '@lib/hooks/fetch-query';
 
-function Leadership() {
-    const [resData, setResData] = useState<AllDataQueryQuery>();
-    // TODO : make this a function, params: url, setFunc, toast
-    async function ApiCall() {
-        try {
-            const response = await fetch('/api/main');
-            const data: AllDataQueryQuery = await response.json();
-            setResData({ ...data });
-        } catch (e) {
-            // usually toast the error as a message
-            console.log('error', e);
-        }
-    }
+const Leadership = () => {
+    const [direcData] = useFetchQuery<GetDirectorsQueryQuery>('/api/leadership');
+    const initialData = direcData?.orgLeadershipCategoryList?.edges[0];
+    const [directorData, setDirectorData] = useState<typeof initialData>();
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        ApiCall();
-    }, []);
-    console.log('error', resData);
+        setDirectorData(initialData ?? directorData);
+    }, [direcData]);
+
+    const handleChange = (node: any, index: number) => {
+        setDirectorData(node);
+        setCurrentIndex(index);
+    };
+
     return (
-        <section className=" flex flex-col  items-start container">
-            <div className="px-12 py-8">
-                <p className="font-extrabold">__Get Updated</p>
-                <p className="text-primaryColor font-semibold text-2xl">Leadership</p>
-            </div>
-            <div className="grid grid-cols-4 gap-4 p-5 w-full ">
-                <div className="shadow-[0px_8px_40px_rgba(9,_44,_76,_0.16)] min-h-[25rem] w-[17rem] rounded-md overflow-hidden">
-                    <div className="flex items-center  max-h-[12rem] overflow-hidden  justify-center">
-                        <Image
-                            className=""
-                            src={humanPlaceHolder.src}
-                            layout="fixed"
-                            height={170}
-                            width={300}
-                        />
-                    </div>
-                    <div className="flex flex-col space-y-2 p-4">
-                        <p className="font-semibold text-primaryColor text-xl line-clamp-2">
-                            Engr. Olanike Ogunbona, MNSE
-                        </p>
-                        <p className="font-thin text-sm">Chairman</p>
-                        <p className="text-xs text-justify line-clamp-5">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius
-                            eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec,
-                            pellentesque bibendum odio.{' '}
-                        </p>
-                        <p className="font-bold self-end  text-[0.5rem] text-primaryColor">
-                            View More . . .
-                        </p>
-                    </div>
-                </div>
-                <div className="shadow-[0px_8px_40px_rgba(9,_44,_76,_0.16)] min-h-[25rem] w-[17rem] rounded-md overflow-hidden">
-                    <div className="flex items-center  max-h-[12rem] overflow-hidden justify-center">
-                        <Image
-                            className=""
-                            src={humanPlaceHolder.src}
-                            layout="fixed"
-                            height={170}
-                            width={300}
-                        />
-                    </div>
-                    <div className="flex flex-col space-y-2 p-4">
-                        <p className="font-semibold text-primaryColor text-xl line-clamp-2">
-                            Engr. Olanike Ogunbona, MNSE
-                        </p>
-                        <p className="font-thin text-sm">Chairman</p>
-                        <p className="text-xs text-justify line-clamp-5">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius
-                            eleifend enim non luctus. Vestibulum magna dui, porttitor vel diam nec,
-                            pellentesque bibendum odio.{' '}
-                        </p>
-                        <p className="font-bold self-end  text-[0.5rem] text-primaryColor">
-                            View More . . .
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <AboutUiLayout headText="__Get Updated" subText="Leadership" className="">
+            <SideNavBar
+                handleChange={handleChange}
+                data={direcData?.orgLeadershipCategoryList?.edges}
+                currentIndex={currentIndex}
+            />
+            <LeadersPaginatedGrid pageData={directorData} />
+        </AboutUiLayout>
     );
-}
+};
 
 Leadership.PageLayout = AboutLayout;
 

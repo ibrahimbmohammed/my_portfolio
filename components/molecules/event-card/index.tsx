@@ -1,5 +1,5 @@
 import Image from '@hoc/next-base-image';
-import Button from '@atoms/button';
+import Button from '@atoms/a-button';
 import dayjs from 'dayjs';
 
 interface IEventCardProps {
