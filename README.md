@@ -112,10 +112,13 @@ components/molecules/m-card-events-main/m-mock-event-card-data.ts
  `
  > #### Components Interfaces and Interface Naming Convention
  >  interface should reside in the same file as it's  component. and the Name of the component should be the name of the interface adding Props as a sufix to  it. **Dont use the I prefix** , as this was discouraged by the typescript team , wrong would be __Icomponent__, and example of the proper naming convention is below.
- > ` 
+ 
+ ` 
  interface MyComponentProps {
   property : string
   ..... : ..
+
+
  const MyComponent = () => ....
  }
  `
