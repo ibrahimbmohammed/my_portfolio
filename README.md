@@ -103,13 +103,15 @@ components/molecules/m-card-events-main/m-mock-event-card-data.ts
 
  to generate types for graphql queries and mutation, this should happen when modifications are made to the graphql folder. types reside in the:
 
- `
+ ```
  generated types folder
  lib/types/gentypes
 
  custom types folder
  lib/types/organism-types
- `
+ ```
+
+ 
  > #### Components Interfaces and Interface Naming Convention
  >  interface should reside in the same file as it's  component. and the Name of the component should be the name of the interface adding Props as a sufix to  it. **Dont use the I prefix** , as this was discouraged by the typescript team , wrong would be __Icomponent__, and example of the proper naming convention is below.
 
