@@ -5,7 +5,7 @@ This is indeed a [Next.js](https://nextjs.org/) project bootstrapped with [`crea
 
  1.  git clone https://github.com/peddlesoft/headless-typescript.git, clone project from the git repository to your working directory on your machine.
  2.  run the `yarn` command on you system to install all needed dependencies in your project, please use yarn, as it is the package manage of choice for this project. dont have yarn ? [Install Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
- 3. vs code settings, make sure you have the eslint and prettier extensions installed on you vs code, in your vscode make prettier your defualt formater, and enable the format on save feature on your vs code. 
+ 3. vs code settings, make sure you have the eslint and prettier extensions installed on you vs code, in your vscode make prettier your default formater, and enable the format on save feature on your vs code. 
 ## Getting Started
 
 First, run the development server:
@@ -111,9 +111,9 @@ components/molecules/m-card-events-main/m-mock-event-card-data.ts
  lib/types/organism-types
  ```
 
- 
+
  > #### Components Interfaces and Interface Naming Convention
- >  interface should reside in the same file as it's  component. and the Name of the component should be the name of the interface adding Props as a sufix to  it. **Dont use the I prefix** , as this was discouraged by the typescript team , wrong would be __Icomponent__, and example of the proper naming convention is below.
+ >  interface should reside in the same file as it's  component. and the Name of the component should be the name of the interface adding Props as a sufix to  it. **Dont use the I prefix** , as this was discouraged by the typescript team , wrong would be __IComponentName__, and example of the proper naming convention is below.
 
  ``` 
  interface MyComponentProps {
@@ -124,7 +124,9 @@ components/molecules/m-card-events-main/m-mock-event-card-data.ts
  const MyComponent = () => ....
  }
  ```
- > keys of the interface should have the same name as the keys of the properties the component is expecting,  its should match the keys of the properties returned by the backend
+ > keys of the interface should have the same name as the keys of the properties the component is expecting,  its should match the keys of the properties returned by the backend.
+
+
  > this can be disregarded only if the interface is repeated more than twice, or the interface is more than 15 lines long, then it make sense to abstract at that point.
  
  #### Importing Types,  File Importing Hierarchy
