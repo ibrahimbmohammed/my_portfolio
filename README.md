@@ -16,12 +16,12 @@ yarn dev
 
 ## Component Hierarchy &  Pseudo Entry Points 
 
-`
+```
 page/_app.tsx
 lib/hoc/home-wrapper
 lib/hoc/admin-wrapper
 lib/hoc/conference-wrapper
-`
+```
 
 this are the pseudo entry points to this application, this approach makes the _app.tsx clean and delegating other responsibilities to the HOCs , the HOC are responsible for the theming logic.   
 
@@ -86,11 +86,11 @@ Open [File Naming Convention Resource](https://medium.com/@masacarvalho/atomic-d
 
 storybook is used for ui documentation, all components must have an associated storybook file, for components that need data for render, appropriate data should be mocked in a seperate file .
 
-`
+```
 components/molecules/m-card-events-main/index.tsx
 components/molecules/m-card-events-main/m-event-card.stories.tsx
 components/molecules/m-card-events-main/m-mock-event-card-data.ts
-`
+```
 
 
 ## Typescript
@@ -112,19 +112,22 @@ components/molecules/m-card-events-main/m-mock-event-card-data.ts
  `
  > #### Components Interfaces and Interface Naming Convention
  >  interface should reside in the same file as it's  component. and the Name of the component should be the name of the interface adding Props as a sufix to  it. **Dont use the I prefix** , as this was discouraged by the typescript team , wrong would be __Icomponent__, and example of the proper naming convention is below.
- > ` 
+
+ ``` 
  interface MyComponentProps {
   property : string
   ..... : ..
+ }
+
  const MyComponent = () => ....
  }
- `
+ ```
  > keys of the interface should have the same name as the keys of the properties the component is expecting,  its should match the keys of the properties returned by the backend
  > this can be disregarded only if the interface is repeated more than twice, or the interface is more than 15 lines long, then it make sense to abstract at that point.
  
  #### Importing Types,  File Importing Hierarchy
 
- `
+ ```
  1. import type { someType } from 'somedir'
  2. import library code 'react' followed by  installed packages if any and if needed'
  3. import custom hooks if needed
@@ -134,13 +137,13 @@ components/molecules/m-card-events-main/m-mock-event-card-data.ts
  7. import  atoms
  8. import molecules
  9. import orgnisms
- `
+ ```
 
 #### Other allowed syntax
 
-`
+```
 import MyComponent, {MyComponentProps} from 'somedir'
-`
+```
 with this you can access both the component and its type.
 
 ## Data Fetching
