@@ -12,7 +12,7 @@ const SideBarItem = ({ index, currentIndex, item, handleAbout }: SideBarItemProp
     const paragraph = item;
     const styleState = currentIndex === index;
     const dimensionState = size.width && size.width >= 768;
-    console.log('item', paragraph.split('</h1>')[0].replace('<h1>', ''));
+    // console.log('item', paragraph.split('</h1>')[0].replace('<h1>', ''));
     return (
         <button
             type="button"

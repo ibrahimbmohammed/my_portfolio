@@ -1,5 +1,5 @@
 import SideBarItem from '@atoms/a-side-nav-item-about';
-import { v4 as uuidv4 } from 'uuid';
+import uuid from '@lib/utils/uuid';
 
 interface SideNavBarProps {
     currentIndex: any;
@@ -13,7 +13,7 @@ const SideNavBar = ({ currentIndex, storeData, handleAbout }: SideNavBarProps) =
             <ul className="pl-3 py-4 space-y-8 text-sm ">
                 {storeData.map((item: any, index: any) => (
                     <SideBarItem
-                        key={uuidv4()}
+                        key={uuid}
                         currentIndex={currentIndex}
                         index={index}
                         item={item}

@@ -6,6 +6,8 @@ import { ROOT_DATA_KEY } from '@constants';
 import loginModalReducer from '@store/login-modal';
 import postModalReducer from '@store/post-modal';
 import themeReducer from '@store/theme-slice';
+import orgIdReducer from '@store/org-id';
+import userEmailReducer from '@store/user-email';
 
 const rootPersistConfig = {
     key: ROOT_DATA_KEY,
@@ -16,6 +18,8 @@ const combinedReducers = combineReducers({
     loginModal: loginModalReducer,
     postModal: postModalReducer,
     theme: themeReducer,
+    orgId: orgIdReducer,
+    userEmail: userEmailReducer,
 });
 
 const rootReducer: typeof combinedReducers = (state, action) => {

@@ -16,11 +16,19 @@ const setModalCaseReducer: CaseReducer<PostModal, PayloadAction<boolean>> = (sta
     return { isOpen: action.payload };
 };
 
+const setCloseCaseReducer = (state: typeof initialState, action: PayloadAction<boolean>) => {
+    if (action.payload === state.isOpen) {
+        return state;
+    }
+    return { isOpen: action.payload };
+};
+
 const postModalSlice = createSlice({
     name: 'postModal',
     initialState,
     reducers: {
         setIsOpen: setModalCaseReducer,
+        setClosed: setCloseCaseReducer,
     },
 });
 
