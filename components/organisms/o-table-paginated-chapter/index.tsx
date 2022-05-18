@@ -23,7 +23,7 @@ const ChaptersPaginatedTable = ({ pageData }: ChaptersPaginatedTableProps) => {
     const apiArraydata = pageData?.edges;
     const [currentTableData, currentPage, pageSize, setCurrentPage] = useMemorisedPaginatedData<
         typeof apiArraydata
-    >(apiArraydata, 10);
+    >(apiArraydata, 5);
     if (!pageData) {
         return <NoRecord text="No Chapters Yet" />;
     }

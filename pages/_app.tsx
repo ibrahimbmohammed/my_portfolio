@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import { persistor, store } from '@store';
 import { ToastContainer } from 'react-toastify';
 import type { AppProps } from 'next/app';
-// import "@fortawesome/fontawesome-free/css/all.min.css";
+// import '@fortawesome/fontawesome-free/css/all.min.css';
 
 type ComponentWithPageLayout = AppProps & {
     Component: AppProps['Component'] & {
@@ -25,7 +25,7 @@ const MyApp = ({ Component, pageProps }: ComponentWithPageLayout) => {
                     <Component {...pageProps} />
                 )}
                 <ToastContainer
-                    position="bottom-right"
+                    position="top-right"
                     autoClose={5000}
                     hideProgressBar
                     newestOnTop={false}

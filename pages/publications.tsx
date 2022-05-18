@@ -1,30 +1,19 @@
-import { useState, useEffect } from 'react';
+import type { WebsitePublicationCategoryListQuery } from '@gentypes/index';
+import useFetchQuery from '@lib/hooks/fetch-query';
+import useNavigation from '@lib/hooks/side-navigation';
 import AboutLayout from '@lib/layout/page-layout/about-layout';
 import AboutUiLayout from '@lib/layout/ui-layout/about-layout';
 import SideNavBar from '@molecules/m-sidebar-navigator';
-import { WebsitePublicationCategoryListQuery } from '@gentypes/index';
-import useFetchQuery from '@lib/hooks/fetch-query';
 import PublicationPaginatedList from '@organisms/o-list-paginated-publication';
-
-//  interface Single = {
-
-//  }
 
 const Publication = () => {
     const [publicationData] =
         useFetchQuery<WebsitePublicationCategoryListQuery>('/api/publications');
     const initialData = publicationData?.publicationCategoryList?.edges[0];
-    const [publicationStateData, setPublicationData] = useState<typeof initialData>();
-    const [currentIndex, setCurrentIndex] = useState(0);
-    useEffect(() => {
-        setPublicationData(initialData ?? publicationStateData);
-    }, [publicationData]);
-
-    const handleChange = (node: typeof initialData, index: number) => {
-        setPublicationData(node);
-        setCurrentIndex(index);
-    };
-
+    const [currentIndex, pageStateData, handleChange] = useNavigation<
+        typeof initialData,
+        WebsitePublicationCategoryListQuery
+    >(initialData, publicationData);
     return (
         <AboutUiLayout headText="__Get Updated" subText="Events" className="">
             <SideNavBar
@@ -32,7 +21,7 @@ const Publication = () => {
                 data={publicationData?.publicationCategoryList?.edges}
                 currentIndex={currentIndex}
             />
-            <PublicationPaginatedList pageData={publicationStateData} />
+            <PublicationPaginatedList pageData={pageStateData} />
         </AboutUiLayout>
     );
 };

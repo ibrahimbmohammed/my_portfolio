@@ -122,7 +122,6 @@ export const applyThemeFunc = async () => {
                 const websiteTheme = JSON.stringify(data);
                 setCookie('theme', websiteTheme as string);
             } else if (themeData) {
-                console.log('error', 'theme');
                 const localWebsiteTheme = JSON.parse(themeData as string);
                 applyTheme(localWebsiteTheme);
             }

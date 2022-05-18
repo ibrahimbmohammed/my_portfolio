@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import type { ReactElement } from 'react';
 import { cloneElement } from 'react';
 import { useRouter } from 'next/router';
@@ -22,7 +23,9 @@ const ActiveLink = ({
     const derivedActiveClassName = asPath === rest.href ? newClassName : childClassName;
     return (
         <Link {...rest}>
-            {cloneElement(children, { className: `${derivedActiveClassName} ${className} ` })}
+            <a>
+                {cloneElement(children, { className: `${derivedActiveClassName} ${className} ` })}
+            </a>
         </Link>
     );
 };

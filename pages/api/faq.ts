@@ -22,7 +22,6 @@ async function getDomainData(req: NextApiRequest, res: NextApiResponse) {
         query: getWebsiteFaqList,
         variables: { id: Number(response.data?.website?.org?.pk) },
     });
-
     if (result.error || !result.data) {
         res.status(500).json({
             message: 'Something went wrong',
