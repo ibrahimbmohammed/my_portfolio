@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable react/button-has-type */
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/function-component-definition */
 
 const Button = () => {
     return (

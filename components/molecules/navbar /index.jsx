@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { GiRotaryPhone } from 'react-icons/gi';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { AiFillHome } from 'react-icons/ai';

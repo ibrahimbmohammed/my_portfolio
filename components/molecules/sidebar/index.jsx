@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { BsLinkedin, BsGithub, BsTwitter, BsGrid3X3GapFill } from 'react-icons/bs';
 
 function SideBarIcon({ icon, text = '' }) {
