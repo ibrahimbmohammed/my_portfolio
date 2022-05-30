@@ -2,12 +2,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { ROOT_DATA_KEY } from '@constants';
+import { ROOT_DATA_KEY } from '@lib/utils/helpers';
 import loginModalReducer from '@store/login-modal';
-import postModalReducer from '@store/post-modal';
-import themeReducer from '@store/theme-slice';
-import orgIdReducer from '@store/org-id';
-import userEmailReducer from '@store/user-email';
 
 const rootPersistConfig = {
     key: ROOT_DATA_KEY,
@@ -16,10 +12,6 @@ const rootPersistConfig = {
 
 const combinedReducers = combineReducers({
     loginModal: loginModalReducer,
-    postModal: postModalReducer,
-    theme: themeReducer,
-    orgId: orgIdReducer,
-    userEmail: userEmailReducer,
 });
 
 const rootReducer: typeof combinedReducers = (state, action) => {
