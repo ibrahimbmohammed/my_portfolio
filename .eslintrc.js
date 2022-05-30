@@ -23,6 +23,7 @@ module.exports = {
                 peerDependencies: true,
             },
         ],
+        'arrow-body-style': ['error', 'as-needed'],
     },
     overrides: [
         {

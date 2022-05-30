@@ -1,28 +1,22 @@
 import type { NextPage } from 'next';
-import HomeWrapper from '@hoc/home-wrapper';
-import { AllDataQueryQuery } from '@gentypes/index';
-import useFetchQuery from '@lib/hooks/fetch-query';
-import HeroSection from '@molecules/m-section-hero-main';
-import ConferenceSection from '@molecules/m-section-conference-main';
-import AboutUsSection from '@molecules/m-section-about-us-main';
-import EventSection from '@molecules/m-section-event-main';
-import PartnersSection from '@molecules/m-section-partners-main';
+import Navbar from '@molecules/navbar ';
+import SectionOne from '@organisms/section-1';
+import SectionTwo from '@organisms/section-2';
+import SectionThree from '@organisms/section-3';
+import SectionFour from '@organisms/section-4';
+import SectionFive from '@organisms/section-5';
 
 const Home: NextPage = () => {
-    const [resData] = useFetchQuery<AllDataQueryQuery>('/api/main');
-
-    // partners, the partners section only needs an input of an array, to increase reusability.
-    const partners = resData?.website?.org?.sponsorSet?.edges;
-
     return (
-        <>
-            <HeroSection />
-            <ConferenceSection resData={resData} />
-            <AboutUsSection />
-            <EventSection resData={resData} />
-            <PartnersSection partners={partners} />
-        </>
+        <div className="flex  flex-col font-theme">
+            <Navbar />
+            <SectionOne />
+            <SectionTwo />
+            <SectionThree />
+            <SectionFour />
+            <SectionFive />
+        </div>
     );
 };
 
-export default HomeWrapper(Home);
+export default Home;

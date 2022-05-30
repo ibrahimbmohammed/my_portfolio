@@ -1,14 +1,9 @@
 import * as yup from 'yup';
 
-const LoginSchema = yup.object().shape({
-    email: yup.string().email().required().typeError('email is required'),
-    password: yup
-        .string()
-        .required()
-        .typeError('No password provided.')
-        .min(8, 'Password is too short - should be 8 chars minimum.')
-        .typeError('Password Short')
-        .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
+const contactSchema = yup.object().shape({
+    user_name: yup.string().required().typeError('your name is required'),
+    user_email: yup.string().email().required().typeError('email is required'),
+    message: yup.string().required().typeError('a valid message is required'),
 });
 
-export default LoginSchema;
+export default contactSchema;
