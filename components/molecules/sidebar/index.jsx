@@ -6,7 +6,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import Link from '@lib/hoc/link';
+import Link from 'next/link';
 
 import { BsLinkedin, BsGithub, BsTwitter, BsGrid3X3GapFill } from 'react-icons/bs';
 
@@ -37,9 +37,19 @@ const NavigationDots = ({ active }) => (
 function Sidebar() {
     return (
         <div className="top-0 fixed z-50 right-0 bg-transparent w-12 h-screen flex flex-col  justify-end text-white shadow-lg">
-            <SideBarIcon icon={<BsLinkedin size="28" />} />
-            <SideBarIcon icon={<BsGithub size="28" />} />
-            <SideBarIcon icon={<BsTwitter size="28" />} />
+            <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ibrahim-mohammed-256054192"
+                rel="noreferrer"
+            >
+                <SideBarIcon icon={<BsLinkedin size="28" />} />
+            </a>
+            <a target="_blank" href="https://github.com/ibrahimbmohammed" rel="noreferrer">
+                <SideBarIcon icon={<BsGithub size="28" />} />
+            </a>
+            <a target="_blank" href="https://twitter.com/Scarecr61646352" rel="noreferrer">
+                <SideBarIcon icon={<BsTwitter size="28" />} />
+            </a>
             <SideBarIcon icon={<BsGrid3X3GapFill size="28" />} />
         </div>
     );
