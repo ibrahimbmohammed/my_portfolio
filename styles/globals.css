@@ -15,6 +15,10 @@
 
 @layer components {
 
+    .app__navigation-dot {
+        @apply  w-[10px] h-[10px] rounded-full bg-[#cbcbcb] m-[0.5rem]
+
+    }
     .sidebar-icon {
       @apply relative flex items-center justify-center
              h-12 w-12 mt-2 mb-2 mx-auto shadow-lg

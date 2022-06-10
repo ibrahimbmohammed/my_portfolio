@@ -1,30 +1,27 @@
 const Experience = [
     {
         id: 1,
-        date: '2016 - present',
+        date: 'Nov 2021 - Present ',
         // iconsSrc: <IoCodeWorking />,
-        title: 'Creative Director',
-        location: 'Doha, Qatar',
-        description:
-            'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+        title: 'Software Engineer',
+        location: 'Abuja, Federal Capital Territory, Nigeria',
+        description: 'Software Enginee at Techamaka Limited · Full-time',
     },
     {
         id: 2,
-        date: '2014 - 2016',
+        date: 'Jul 2021 - Nov 2021 ',
         // iconsSrc: <IoCodeWorking />,
-        title: 'Creative Director',
-        location: 'Doha, Qatar',
-        description:
-            'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+        title: 'Software Engineer',
+        location: 'Abuja, Federal Capital Territory, Nigeria',
+        description: 'Software Enginee at Molcom Multi-Concepts Limited · Contract',
     },
     {
         id: 3,
-        date: '2012 - 2014',
+        date: 'Jan 2021 - Nov 2021',
         // iconsSrc: <IoCodeWorking />,
-        title: 'Creative Director',
-        location: 'Doha, Qatar',
-        description:
-            'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+        title: 'Head, Cyber & Information security',
+        location: 'Abuja, Federal Capital Territory, Nigeria',
+        description: 'Head, Cyber & Information security at RESLARC NIGERIA LIMITED · Full-time',
     },
 ];
 

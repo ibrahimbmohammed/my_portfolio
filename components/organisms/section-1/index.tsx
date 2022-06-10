@@ -1,21 +1,27 @@
 /* eslint-disable import/no-unresolved */
 import Sidebar from '@molecules/sidebar';
 import Button from '@atoms/button';
+import Link from 'next/link';
 
 function SectionOne() {
     return (
-        <section className="sect  flex flex-col md:flex-row   items-start overflow-hidden ">
+        <section
+            id="sectionOne"
+            className="sect  flex flex-col md:flex-row   items-start overflow-hidden "
+        >
             <Sidebar />
             <div className="flex-grow order-last w-full px-3 md:px-0  md:w-20  flex flex-col items-center  md:mt-32 md:pt-28">
                 <div className="md:w-1/2">
-                    <p className="text-white font-theme text-center md:text-left font-light -mt-[28rem] md:-mt-[0rem] md:text-xl ">
+                    <p className="text-white font-theme text-center md:text-left font-thin -mt-[28rem] md:-mt-[0rem] md:text-lg ">
                         <b>HI there</b>, welcome to my portfolio, i am a passionate web developer
                         and a software engineer, feel free to dive deep into my space.
                     </p>
                 </div>
-                <div className="-mt-[22rem] md:-mt-[0rem]">
-                    <Button />
-                </div>
+                <Link href="#sectionFour">
+                    <div className="-mt-[22rem] md:-mt-[0rem]">
+                        <Button />
+                    </div>
+                </Link>
             </div>
 
             <div className="flex flex-col flex-grow  relative  w-screen h-full md:w-[1%]  ">

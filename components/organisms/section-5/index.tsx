@@ -71,23 +71,26 @@ function SectionFive() {
     };
 
     return (
-        <section className="sect relative flex items-center justify-center w-full md:px-[3rem]">
-            <span className="inline-block  absolute top-0 right-[12rem]">
+        <section
+            id="sectionFive"
+            className="sect relative flex items-center  justify-center w-full md:px-[3rem]"
+        >
+            <span className="inline-block  absolute -top-[6rem] lg:top-[2rem] left-0">
                 <h1 className="font-extrabold  self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
                     GET IN TOUCH
                 </h1>
             </span>
-            <div className="flex w-full h-full  flex-col md:flex-row  items-center justify-between">
+            <div className="flex w-full h-full flex-col md:flex-row  items-center justify-between">
                 <form
                     onSubmit={handleSubmit}
-                    className="form flex w-full md:w-1/3 flex-col space-y-5"
+                    className="form flex w-full  pt-[10rem] lg:pt-0  px-3  h-[18rem] md:w-1/3 flex-col space-y-3"
                 >
                     <Input
                         id="name"
                         type="text"
                         name="user_name"
                         htmlFor="name"
-                        label="name"
+                        label="Name"
                         labelClassName="flex flex-col"
                         value={formValues.user_name}
                         handleChange={updateForm}
@@ -100,7 +103,7 @@ function SectionFive() {
                         type="email"
                         name="user_email"
                         htmlFor="email"
-                        label="email"
+                        label="Email"
                         labelClassName="flex flex-col"
                         value={formValues.user_email}
                         handleChange={updateForm}
@@ -109,7 +112,7 @@ function SectionFive() {
                         error={path(['user_email'], errors)}
                     />
                     <div className="flex flex-col">
-                        <Label htmlFor="message" label="message" className="" />
+                        <Label htmlFor="message" label="Message" className="" />
                         <TextArea
                             id="message"
                             name="message"
@@ -130,8 +133,8 @@ function SectionFive() {
                         value="Send"
                     />
                 </form>
-                <div className="contact card w-full md:w-1/3">
-                    <div className="border px-4 py-6">
+                <div className="contact card w-full px-3 md:w-1/3">
+                    <div className="border border-slate-600 rounded-md bg-slate-500/20 px-4 py-6 space-y-7">
                         <span className="flex space-x-2 items-center">
                             <FiMail />
                             <span className="flex flex-col">
