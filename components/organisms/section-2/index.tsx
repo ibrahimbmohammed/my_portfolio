@@ -30,21 +30,21 @@ function SectionTwo() {
     return (
         <section
             id="sectionTwo"
-            className="sect font-theme  relative flex justify-evenly overflow-hidden px-4"
+            className="sect font-theme h-fit lg:h-screen pb-6 relative flex justify-evenly overflow-hidden px-4"
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute -bottom-50 -right-8" />
             <span className="inline-block  absolute -top-[6rem] right-[3rem]">
-                <h1 className="font-extrabold  self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
+                <h1 className="font-extrabold  self-center mx-auto text-transparent text-2xl lg:text-6xl md:text-4xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
                     ABOUT
                 </h1>
             </span>
-            <div className="pl-[0] md:pl-[3rem]  w-full flex flex-col space-y-2 border">
-                <div className="w-full  flex flex-col items-start justify-start space-y-4 ">
-                    <div className="flex border items-end justify-between space-x-4">
+            <div className="pl-[0] md:pl-[3rem]  w-full flex flex-col space-y-2 ">
+                <div className="w-full   flex flex-col items-start justify-start space-y-8 ">
+                    <div className="flex space-y-4 lg:space-y-0  flex-col lg:flex-row items-start lg:items-end justify-between space-x-0 lg:space-x-4">
                         <div className="overflow-hidden w-fit bg-slate-800 rounded-xl px-4 pb-12   mt-8 h-[10rem]">
                             <Image src={me} width="190" height="210" />
                         </div>
-                        <div className="bio w-[34rem] font-theme font-light">
+                        <div className="bio w-[18rem] lg:w-[34rem] font-theme font-light">
                             <p className="text-justify leading-tight">
                                 Hello, i’m Mohammed Ibrahim B , a software Engineer with a knack for
                                 cybersecurity, my prime motivation is excellence and to excel at any
@@ -56,7 +56,38 @@ function SectionTwo() {
                             </p>
                         </div>
                     </div>
-                    <div className="grid border  grid-cols-6 gap-x-3 gap-y-3">
+                    <div className="flex flex-col md:flex-row space-x-0 lg:space-x-3 space-y-4 lg:space-y-0">
+                        <div className="h-[12rem] w-[16rem] bg-[#141414] flex flex-col space-y-3 border border-gray-800 rounded-md px-8 pt-2">
+                            <div className=" rounded-md px-1 pt-[0.5rem] w-fit">
+                                <Image src={educationSvg} width={35} height={30} />
+                            </div>
+                            <p className="font-semibold text-xs  ">Education</p>
+                            <span className="flex space-x-2 items-center font-normal text-xs  ">
+                                <p>Post Grad</p>:<p>Msc, Cyber Security</p>
+                            </span>
+                            <span className="flex space-x-2 items-center font-normal text-xs ">
+                                <p className="break-normal">Under Grad</p>:
+                                <p>Bsc, Electrical Engineering</p>
+                            </span>
+                        </div>
+                        <div className="h-[12rem] w-[16rem] bg-[#141414] flex flex-col space-y-3 border border-gray-800 rounded-md px-8 pt-2">
+                            <div className="rounded-md px-1 pt-[0.5rem] w-fit">
+                                <Image src={workSvg} width={35} height={30} />
+                            </div>
+                            <p className="font-semibold  text-xs">Curriculum Vitae</p>
+                            <span className=" h-full flex items-center justify-center">
+                                <a
+                                    href="https://docs.google.com/document/d/1udoAt9Y-84un0GfeapTxyuF_xJH1GlPrgoUJA_ZWrB0/edit?usp=sharing"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="cursor-pointer"
+                                >
+                                    <Image src={downloadSvg} width={35} height={30} />
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div className="grid    grid-cols-6 gap-x-3 gap-y-3">
                         <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                             <Image src={typescript} width="40" height="40" />
                         </div>
@@ -111,33 +142,6 @@ function SectionTwo() {
                         <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                             <Image src={svg14} width="40" height="40" />
                         </div>
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row space-x-0 md:space-x-3">
-                    <div className="h-[12rem] w-[16rem] bg-[#141414] flex flex-col space-y-3 border border-gray-800 rounded-md px-8 pt-2">
-                        <div className="border border-blue-400 rounded-md px-1 pt-[0.5rem] w-fit">
-                            <Image src={educationSvg} width={35} height={30} />
-                        </div>
-                        <p className="font-semibold ">Education</p>
-                        <span className="">
-                            <p>hello</p>
-                        </span>
-                    </div>
-                    <div className="h-[12rem] w-[16rem] bg-[#141414] flex flex-col space-y-3 border border-gray-800 rounded-md px-8 pt-2">
-                        <div className="border border-blue-400 rounded-md px-1 pt-[0.5rem] w-fit">
-                            <Image src={workSvg} width={35} height={30} />
-                        </div>
-                        <p className="font-semibold ">Curriculum Vitae</p>
-                        <span className="cursor-pointer">
-                            <a
-                                href="https://docs.google.com/document/d/1udoAt9Y-84un0GfeapTxyuF_xJH1GlPrgoUJA_ZWrB0/edit?usp=sharing"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <Image src={downloadSvg} width={35} height={30} />
-                            </a>
-                        </span>
                     </div>
                 </div>
             </div>

@@ -13,8 +13,11 @@ import Image from 'next/image';
 
 function SectionFour() {
     return (
-        <section className="sect h-fit relative md:overflow-hidden  flex items-center justify-center pt-[12rem]">
-            <span className="inline-block  absolute top-0 right-[12rem]">
+        <section
+            id="sectionFour"
+            className="sect h-fit relative md:overflow-hidden  flex items-center justify-center pt-[12rem]"
+        >
+            <span className="inline-block  absolute -top-[5rem] right-[3rem]">
                 <h1 className="font-extrabold  self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
                     MY PROJECTS
                 </h1>
