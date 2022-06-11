@@ -39,8 +39,8 @@ function SectionTwo() {
                 </h1>
             </span>
             <div className="pl-[0] md:pl-[3rem]  w-full flex flex-col space-y-2 ">
-                <div className="w-full   flex flex-col items-start justify-start space-y-8 ">
-                    <div className="flex space-y-4 lg:space-y-0  flex-col lg:flex-row items-start lg:items-end justify-between space-x-0 lg:space-x-4">
+                <div className="w-full   flex flex-col  items-center justify-center lg:items-start lg:justify-start space-y-8 ">
+                    <div className="flex space-y-4 lg:space-y-0  flex-col lg:flex-row items-center lg:items-end justify-between space-x-0 lg:space-x-4">
                         <div className="overflow-hidden w-fit bg-slate-800 rounded-xl px-4 pb-12   mt-8 h-[10rem]">
                             <Image src={me} width="190" height="210" />
                         </div>
