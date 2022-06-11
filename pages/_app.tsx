@@ -8,6 +8,7 @@ import { persistor, store } from '@store';
 import { ToastContainer } from 'react-toastify';
 import type { AppProps } from 'next/app';
 import LoadingScreen from '@atoms/a-loading-screen';
+import HeadComp from '@molecules/m-head';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 
 type ComponentWithPageLayout = AppProps & {
@@ -21,6 +22,7 @@ const MyApp = ({ Component, pageProps }: ComponentWithPageLayout) => {
     useEffect(() => {
         setLoading(true);
     }, []);
+    <HeadComp />;
     return (
         <Provider store={store}>
             <PersistGate loading={<p>Loading</p>} persistor={persistor}>
