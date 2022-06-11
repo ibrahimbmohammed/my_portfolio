@@ -1,9 +1,10 @@
 /* eslint-disable import/no-unresolved */
 import type { ChangeEvent } from 'react';
 import { useState } from 'react';
-import Input from '@molecules/m-labeled-input';
 import TextArea from '@atoms/a-text-area';
 import Label from '@atoms/a-input-label';
+import Spinner from '@atoms/a-spinner';
+import Input from '@molecules/m-labeled-input';
 import { path } from 'ramda';
 import { GoLocation } from 'react-icons/go';
 import { FiMail, FiPhone } from 'react-icons/fi';
@@ -21,7 +22,7 @@ function SectionFive() {
     };
     const [formValues, setform] = useState(initialState);
     const [errors, setErrors] = useState({});
-    const [, setIsSubmitting] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const updateForm = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setform({
@@ -59,6 +60,7 @@ function SectionFive() {
                         reset();
                     },
                     (error) => {
+                        setIsSubmitting(false);
                         Toast(error?.text as string, { type: 'error' });
                     },
                 );
@@ -127,11 +129,15 @@ function SectionFive() {
                         />
                     </div>
 
-                    <input
-                        className="bg-white text-black cursor-pointer rounded-xl py-2"
-                        type="submit"
-                        value="Send"
-                    />
+                    {isSubmitting ? (
+                        <Spinner />
+                    ) : (
+                        <input
+                            className="bg-white text-black cursor-pointer rounded-xl py-2"
+                            type="submit"
+                            value="Send"
+                        />
+                    )}
                 </form>
                 <div className="contact card w-full px-3 md:w-1/3">
                     <div className="border border-slate-600 rounded-md bg-slate-500/20 px-4 py-6 space-y-7">

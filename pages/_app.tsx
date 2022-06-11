@@ -1,10 +1,13 @@
+/* eslint-disable no-nested-ternary */
 import '../styles/globals.css';
+import { useState, useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { persistor, store } from '@store';
 import { ToastContainer } from 'react-toastify';
 import type { AppProps } from 'next/app';
+import LoadingScreen from '@atoms/a-loading-screen';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 
 type ComponentWithPageLayout = AppProps & {
@@ -14,16 +17,14 @@ type ComponentWithPageLayout = AppProps & {
 };
 
 const MyApp = ({ Component, pageProps }: ComponentWithPageLayout) => {
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+    }, []);
     return (
         <Provider store={store}>
             <PersistGate loading={<p>Loading</p>} persistor={persistor}>
-                {Component.PageLayout ? (
-                    <Component.PageLayout>
-                        <Component {...pageProps} />
-                    </Component.PageLayout>
-                ) : (
-                    <Component {...pageProps} />
-                )}
+                {loading ? <Component {...pageProps} /> : <LoadingScreen />}
                 <ToastContainer
                     position="top-right"
                     autoClose={5000}
