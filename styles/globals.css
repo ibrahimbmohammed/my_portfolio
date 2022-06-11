@@ -69,7 +69,7 @@
 
 @layer base {
     html {
-      @apply overflow-x-hidden overscroll-y-auto;
+      @apply overflow-x-hidden overscroll-y-auto scrollbar-hide ;
     }
   }
 

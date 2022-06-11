@@ -8,7 +8,7 @@ import SectionFive from '@organisms/section-5';
 
 const Home: NextPage = () => {
     return (
-        <div className="flex  flex-col font-theme">
+        <div className="flex  flex-col font-theme ">
             <Navbar />
             <SectionOne />
             <SectionTwo />
