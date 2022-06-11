@@ -75,17 +75,17 @@ function SectionFive() {
     return (
         <section
             id="sectionFive"
-            className="sect relative h-[calc(100vh_+_7rem)] md:h-[calc(100vw_+_5rem)] lg:h-[calc(100vw_-_15rem)]  pb-4 xl:h-screen flex items-center  justify-center w-full xl:px-[3rem]"
+            className="sect relative h-[calc(100vh_+_10rem)] md:h-[calc(100vw_+_5rem)] lg:h-[calc(100vw_-_15rem)]  pb-4 xl:h-screen flex items-center  justify-center w-full xl:px-[3rem]"
         >
             <span className="inline-block  absolute -top-[6rem] lg:top-[2rem] inset-y-1/2 xl:left-0">
                 <h1 className="font-extrabold lg:hidden xl:flex self-center mx-auto text-transparent text-4xl xl:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 xl:mt-32 xl:ml-16">
                     GET IN TOUCH
                 </h1>
             </span>
-            <div className="flex w-full h-full flex-col-reverse xl:flex-row  items-center justify-between">
+            <div className="flex w-full h-full  flex-col xl:flex-row  items-center justify-between">
                 <form
                     onSubmit={handleSubmit}
-                    className="form flex w-full  pt-[10rem] lg:pt-0  px-3 md:mt-[4rem] xl:mt-[0rem]   h-[18rem] md:w-2/3  xl:w-1/3 flex-col space-y-3"
+                    className="form flex w-full  pt-[10rem] xl:pt-[10rem]  lg:pt-0  px-3 md:mt-[4rem] xl:mt-[0rem]   h-[18rem] md:w-2/3  xl:w-1/3 flex-col space-y-3"
                 >
                     <Input
                         id="name"
@@ -139,7 +139,7 @@ function SectionFive() {
                         />
                     )}
                 </form>
-                <div className="contact card w-full px-3 md:w-2/3  xl:w-1/3">
+                <div className="contact  card  w-full px-3 md:w-2/3  xl:w-1/3">
                     <div className="border border-slate-600 rounded-xl bg-slate-500/20 px-4 py-6 space-y-7">
                         <span className="flex space-x-2 items-center">
                             <FiMail />
