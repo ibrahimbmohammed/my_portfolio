@@ -6,10 +6,6 @@ export default function Document() {
             <Head>
                 <meta charSet="utf-8" />
                 <meta name="theme-color" content="#000000" />
-                <meta name="description" content="Official website for... something." />
-                <link rel="icon" href="/images/mic.jpg" />
-
-                <meta name="title" content="My Portfolio Website" />
                 <meta
                     name="description"
                     content=" Hello, i’m Mohammed Ibrahim B , a software Engineer with a knack for
@@ -20,6 +16,10 @@ export default function Document() {
                     with cyber security consciousness in both the design and
                     implementation."
                 />
+                <link rel="icon" href="/images/mic.jpg" />
+
+                <meta name="title" content="My Portfolio Website" />
+
                 <meta
                     property="og:image"
                     content="https://i.ibb.co/xfdt3Xt/1644326557243-1.jpg"
