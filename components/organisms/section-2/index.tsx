@@ -30,11 +30,11 @@ function SectionTwo() {
     return (
         <section
             id="sectionTwo"
-            className="sect font-theme h-fit lg:h-screen pb-6 relative flex justify-evenly overflow-hidden px-4"
+            className="sect font-theme h-fit  xl:h-screen 3xl:h-[calc(80vh_-_5rem)] pb-6 relative flex justify-evenly overflow-hidden px-4"
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute -bottom-50 -right-8" />
-            <span className="inline-block  absolute -top-[6rem] right-[3rem]">
-                <h1 className="font-extrabold  self-center mx-auto text-transparent text-2xl lg:text-6xl md:text-4xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
+            <span className="sm:inline-block hidden  absolute -top-[6rem] right-[3rem]">
+                <h1 className="font-extrabold  self-center mx-auto text-transparent text-2xl xl:text-6xl md:text-4xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
                     ABOUT
                 </h1>
             </span>
@@ -63,11 +63,15 @@ function SectionTwo() {
                             </div>
                             <p className="font-semibold text-xs  ">Education</p>
                             <span className="flex space-x-2 items-center font-normal text-xs  ">
-                                <p>Post Grad</p>:<p>Msc, Cyber Security</p>
+                                <p className="font-semibold text-[0.7rem]">Post Grad</p> <b>:</b>
+                                <p>Msc, Cyber Security</p>
                             </span>
                             <span className="flex space-x-2 items-center font-normal text-xs ">
-                                <p className="break-normal">Under Grad</p>:
-                                <p>Bsc, Electrical Engineering</p>
+                                <p className="break-normal font-semibold text-[0.7rem]">
+                                    Under Grad
+                                </p>
+                                <b>:</b>
+                                <p className="">Bsc, Electrical Engineering</p>
                             </span>
                         </div>
                         <div className="h-[12rem] w-[16rem] bg-[#141414] flex flex-col space-y-3 border border-gray-800 rounded-md px-8 pt-2">
