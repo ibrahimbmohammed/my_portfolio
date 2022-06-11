@@ -25,7 +25,7 @@ const MyApp = ({ Component, pageProps }: ComponentWithPageLayout) => {
     <HeadComp />;
     return (
         <Provider store={store}>
-            <PersistGate loading={<p>Loading</p>} persistor={persistor}>
+            <PersistGate loading={<LoadingScreen />} persistor={persistor}>
                 {loading ? <Component {...pageProps} /> : <LoadingScreen />}
                 <ToastContainer
                     position="top-right"
