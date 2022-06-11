@@ -30,7 +30,7 @@ function SectionTwo() {
     return (
         <section
             id="sectionTwo"
-            className="sect font-theme h-fit  xl:h-screen 3xl:h-[calc(80vh_-_5rem)] pb-6 relative flex justify-evenly overflow-hidden px-4"
+            className="sect font-theme h-fit  xl:h-screen 3xl:h-screen pb-6 relative flex justify-evenly overflow-hidden px-4"
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute -bottom-50 -right-8" />
             <span className="sm:inline-block hidden  absolute -top-[6rem] right-[3rem]">

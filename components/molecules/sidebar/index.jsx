@@ -36,7 +36,7 @@ const NavigationDots = ({ active }) => (
 
 function Sidebar() {
     return (
-        <div className="top-0 fixed z-50 right-0 bg-transparent w-12 h-screen flex flex-col  justify-end text-white shadow-lg">
+        <div className="hidden  top-0 fixed z-50 right-0 bg-transparent w-12 h-screen md:flex flex-col  justify-end text-white shadow-lg">
             <a
                 target="_blank"
                 href="https://www.linkedin.com/in/ibrahim-mohammed-256054192"
