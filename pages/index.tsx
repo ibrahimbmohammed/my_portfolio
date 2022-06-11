@@ -5,8 +5,10 @@ import SectionTwo from '@organisms/section-2';
 import SectionThree from '@organisms/section-3';
 import SectionFour from '@organisms/section-4';
 import SectionFive from '@organisms/section-5';
+import HeadComp from '@molecules/m-head';
 
 const Home: NextPage = () => {
+    <HeadComp />;
     return (
         <div className="flex  flex-col font-theme">
             <Navbar />
