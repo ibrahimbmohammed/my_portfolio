@@ -85,7 +85,7 @@ function SectionFive() {
             <div className="flex w-full h-full  flex-col xl:flex-row  items-center justify-between">
                 <form
                     onSubmit={handleSubmit}
-                    className="form flex w-full   pt-[10rem] xl:pt-[0rem]  lg:pt-0  px-3 md:mt-[4rem] xl:mt-[0rem]   h-[18rem] md:w-2/3  xl:w-1/3 flex-col space-y-3"
+                    className="form flex w-full z-30   pt-[10rem] xl:pt-[0rem]  lg:pt-0  px-3 md:mt-[4rem] xl:mt-[0rem]   h-[18rem] md:w-2/3  xl:w-1/3 flex-col space-y-3"
                 >
                     <Input
                         id="name"
