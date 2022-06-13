@@ -64,6 +64,7 @@ module.exports = {
         fontFamily: {
             theme: "'Montserrat', sans-serif",
             Theme: 'var(--font-name), var(--font-family)',
+            fans: "'Fascinate', 'cursive' ",
         },
         container: {
             center: true,
