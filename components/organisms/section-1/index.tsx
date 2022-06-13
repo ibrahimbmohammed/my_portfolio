@@ -28,7 +28,7 @@ function SectionOne() {
                 <div className="absolute h-screen flex flex-col  w-full  ">
                     <div className="inline-block  w-20 h-20  moon rounded-full absolute -top-4 -left-8" />
 
-                    <h1 className="font-extrabold font-theme self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-700 to-gray-200 mt-40 md:mt-32 md:ml-16">
+                    <h1 className="font-extrabold font-fans self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-700 to-gray-200 mt-40 md:mt-32 md:ml-16">
                         Moh&rsquo;d Ibrahim
                     </h1>
                     <div className=" inline-block w-72 h-72 moon rounded-full absolute right-0 bottom-24" />
@@ -38,7 +38,7 @@ function SectionOne() {
                 </div>
             </div>
 
-            <div className="hidden md:block font-theme border-r-4 border-gray-200 w-16 h-2/3  mt-16">
+            <div className="hidden md:block font-fans border-r-4 border-gray-200 w-16 h-2/3  mt-16">
                 <h1 className="vertical-rl text-orientation font-bold text-white text-6xl tracking-tighter">
                     {' '}
                     PORTFOLIO

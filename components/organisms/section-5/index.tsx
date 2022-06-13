@@ -78,7 +78,7 @@ function SectionFive() {
             className="sect  relative h-[calc(100vh_+_10rem)] md:h-[calc(100vw_+_5rem)] lg:h-[calc(100vw_-_15rem)]  pb-4 xl:h-screen flex items-center  justify-center w-full xl:px-[3rem]"
         >
             <span className="inline-block  absolute -top-[6rem] lg:top-[2rem] inset-y-1/2 xl:left-0">
-                <h1 className="font-extrabold lg:hidden xl:flex self-center mx-auto text-transparent text-4xl xl:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 xl:mt-32 xl:ml-16">
+                <h1 className="font-extrabold font-fans  lg:hidden xl:flex self-center mx-auto text-transparent text-4xl xl:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 xl:mt-32 xl:ml-16">
                     GET IN TOUCH
                 </h1>
             </span>

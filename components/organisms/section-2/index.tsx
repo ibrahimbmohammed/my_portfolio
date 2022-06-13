@@ -17,6 +17,9 @@ import svg12 from '@assets/svg/svg12.svg';
 import svg13 from '@assets/svg/svg13.svg';
 import svg14 from '@assets/svg/svg14.svg';
 import svg15 from '@assets/svg/svg15.svg';
+import svg16 from '@assets/svg/reactn.svg';
+import svg17 from '@assets/svg/rust.svg';
+import svg18 from '@assets/svg/docker.svg';
 import downloadSvg from '@assets/svg/download.svg';
 import workSvg from '@assets/svg/brief.svg';
 import educationSvg from '@assets/svg/education.svg';
@@ -34,7 +37,7 @@ function SectionTwo() {
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute -bottom-50 -right-8" />
             <span className="sm:inline-block hidden  absolute -top-[6rem] right-[3rem]">
-                <h1 className="font-extrabold  self-center mx-auto text-transparent text-2xl xl:text-6xl md:text-4xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
+                <h1 className="font-extrabold  font-fans self-center mx-auto text-transparent text-2xl xl:text-6xl md:text-4xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
                     ABOUT
                 </h1>
             </span>
@@ -91,60 +94,83 @@ function SectionTwo() {
                             </span>
                         </div>
                     </div>
-                    <div className="grid    grid-cols-6 gap-x-3 gap-y-3">
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={typescript} width="40" height="40" />
+                    <div className="flex flex-col">
+                        <div className="flex flex-col space-y-2">
+                            <span className="self-center lg:self-start">
+                                <p className="text-xs">Skills</p>
+                            </span>
+                            <div className="grid    grid-cols-6 gap-x-3 gap-y-3">
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={typescript} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={javascript} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={post} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg1} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg2} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg3} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg15} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg4} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg5} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg6} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg7} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg8} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg9} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg10} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg12} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg13} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg11} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg14} width="40" height="40" />
+                                </div>
+                            </div>
                         </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={javascript} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={post} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg1} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg2} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg3} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg15} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg4} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg5} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg6} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg7} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg8} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg9} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg10} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg12} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg13} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg11} width="40" height="40" />
-                        </div>
-                        <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
-                            <Image src={svg14} width="40" height="40" />
+                        <div className="flex flex-col space-y-2 mt-4">
+                            <span className="self-center lg:self-start">
+                                <p className="text-xs">Currently Learning</p>
+                            </span>
+                            <div className="grid    grid-cols-6 gap-x-3 gap-y-3">
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg16} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg17} width="40" height="40" />
+                                </div>
+                                <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
+                                    <Image src={svg18} width="40" height="40" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ function SectionThree() {
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute rotate-12 " />
             <span className="inline-block  absolute -top-[8rem] left-0">
-                <h1 className="font-extrabold hidden xl:block  self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
+                <h1 className="font-extrabold font-fans  hidden xl:block  self-center mx-auto text-transparent text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 mt-40 md:mt-32 md:ml-16">
                     EXPERIENCE
                 </h1>
             </span>
