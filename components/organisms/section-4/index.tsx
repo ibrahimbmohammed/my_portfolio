@@ -5,7 +5,7 @@ import propic2 from '@assets/png/pro2.png';
 import propic4 from '@assets/png/pro4.png';
 import propic5 from '@assets/png/pro5.png';
 import propic6 from '@assets/png/pro6.png';
-import propic7 from '@assets/png/pro7.png';
+import propic7 from '@assets/webp/applypay.webp';
 import propic8 from '@assets/png/pro8.png';
 import propic9 from '@assets/png/pro9.png';
 import { FaGithubAlt, FaGlobeAsia } from 'react-icons/fa';
@@ -212,7 +212,7 @@ function SectionFour() {
                             <div className="flex space-x-3">
                                 <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
                                     <a
-                                        href="https://kind-cray-e14135.netlify.app/"
+                                        href="https://dazzling-llama-0a8237.netlify.app/school"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -221,7 +221,7 @@ function SectionFour() {
                                 </div>
                                 <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
                                     <a
-                                        href="https://github.com/ibrahimbmohammed/react-phone-store"
+                                        href="https://github.com/ibrahimbmohammed/applypay"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
