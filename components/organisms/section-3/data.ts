@@ -10,7 +10,7 @@ const Experience = [
 
     {
         id: 2,
-        date: 'Jan 2021 - Nov 2021',
+        date: '2021 - 2021',
         // iconsSrc: <IoCodeWorking />,
         title: 'Head, Cyber & Information security',
         location: 'Abuja, Federal Capital Territory, Nigeria',
@@ -18,7 +18,7 @@ const Experience = [
     },
     {
         id: 3,
-        date: 'Jan 2020 - Dec 2020 ',
+        date: ' 2019 - 2020 ',
         // iconsSrc: <IoCodeWorking />,
         title: 'Software Engineer',
         location: 'Abuja, Federal Capital Territory, Nigeria',
