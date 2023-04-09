@@ -11,7 +11,7 @@ import propic9 from '@assets/png/pro9.png';
 import { FaGithubAlt, FaGlobeAsia } from 'react-icons/fa';
 import { IoIosArrowUp } from 'react-icons/io';
 import Image from 'next/image';
-import TabHoc from '@lib/hoc/tabs';
+// import TabHoc from '@lib/hoc/tabs';
 
 function SectionFour() {
     return (
@@ -25,9 +25,9 @@ function SectionFour() {
                 </h1>
             </span>
             <div className="flex flex-col items-center justify-center ">
-                <div className="">
+                {/* <div className="">
                     <TabHoc />
-                </div>
+                </div> */}
                 <div className="container lg:px-12  grid grid-cols-1 lg:grid-cols-2 gap-y-5 justify-items-center md:justify-items-center xl:grid-cols-4 lg:gap-5 justify-center items-center ">
                     <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
                         <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
