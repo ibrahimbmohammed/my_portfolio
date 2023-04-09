@@ -33,7 +33,7 @@ function SectionTwo() {
     return (
         <section
             id="sectionTwo"
-            className="sect font-theme h-fit  xl:h-screen 3xl:h-screen pb-6 relative flex justify-evenly overflow-hidden px-4"
+            className="sect font-theme h-fit  xl:h-[calc(100vh_+_4rem)] 3xl:h-screen pb-6 relative flex justify-evenly overflow-hidden px-4"
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute -bottom-50 -right-8" />
             <span className="sm:inline-block hidden  absolute -top-[6rem] right-[3rem]">
@@ -156,17 +156,17 @@ function SectionTwo() {
                                 </div>
                                 <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                                     <Image src={svg16} width="40" height="40" />
-                                </div>                             
+                                </div>
                                 <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                                     <Image src={svg18} width="40" height="40" />
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col space-y-2 mt-4">
+                        <div className="flex flex-col space-y-2 mt-4 ">
                             <span className="self-center lg:self-start">
                                 <p className="text-xs">Currently Learning</p>
                             </span>
-                            <div className="grid    grid-cols-6 gap-x-3 gap-y-3 pb-8">
+                            <div className="grid   grid-cols-6 gap-x-3 gap-y-3 ">
                                 <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                                     <Image src={svg17} width="40" height="40" />
                                 </div>
