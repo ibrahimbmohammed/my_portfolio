@@ -157,7 +157,6 @@ function SectionTwo() {
                                 <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                                     <Image src={svg16} width="40" height="40" />
                                 </div>
-
                                 <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                                     <Image src={svg18} width="40" height="40" />
                                 </div>
@@ -167,7 +166,7 @@ function SectionTwo() {
                             <span className="self-center lg:self-start">
                                 <p className="text-xs">Currently Learning</p>
                             </span>
-                            <div className="grid    grid-cols-6 gap-x-3 gap-y-3 ">
+                            <div className="grid   grid-cols-6 gap-x-3 gap-y-3 ">
                                 <div className="rounded-lg h-fit w-fit p-2 flex items-center bg-[#383E45] hover:scale-105 trans">
                                     <Image src={svg17} width="40" height="40" />
                                 </div>
