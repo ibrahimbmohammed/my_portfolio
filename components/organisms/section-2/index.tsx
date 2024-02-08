@@ -64,7 +64,7 @@ function SectionTwo() {
                             <div className=" rounded-md px-1 pt-[0.5rem] w-fit">
                                 <Image src={educationSvg} width={35} height={30} />
                             </div>
-                            <p className="font-semibold text-xs  ">Education</p>
+                            <p className="font-semibold text-xs">Education</p>
                             <span className="flex space-x-2 items-center font-normal text-xs  ">
                                 <p className="font-semibold text-[0.7rem]">Post Grad</p> <b>:</b>
                                 <p>Msc, Cyber Security</p>

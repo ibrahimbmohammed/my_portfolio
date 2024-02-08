@@ -2,11 +2,13 @@
 /* eslint-disable import/no-unresolved */
 import hotelpic from '@assets/png/hotel1.png';
 import propic2 from '@assets/png/pro2.png';
-import propic4 from '@assets/png/pro4.png';
+import propic4 from '@assets/webp/unify.webp';
 import propic5 from '@assets/png/pro5.png';
 import propic6 from '@assets/png/pro6.png';
 import propic7 from '@assets/webp/applypay.webp';
-import propic8 from '@assets/png/pro8.png';
+
+import propic8 from '@assets/webp/copyBot.webp';
+
 import propic9 from '@assets/png/pro9.png';
 import { FaGithubAlt, FaGlobeAsia } from 'react-icons/fa';
 import { IoIosArrowUp } from 'react-icons/io';
@@ -39,7 +41,7 @@ function SectionFour() {
                                 <div className="flex space-x-3">
                                     <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
                                         <a
-                                            href="https://peaceful-brahmagupta-20d30e.netlify.app"
+                                            href="https://techamaka.com/"
                                             target="_blank"
                                             rel="noreferrer"
                                         >
@@ -48,7 +50,7 @@ function SectionFour() {
                                     </div>
                                     <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
                                         <a
-                                            href="https://github.com/ibrahimbmohammed/react-hotel-rooms-app"
+                                            href="https://github.com/ibrahimbmohammed/"
                                             target="_blank"
                                             rel="noreferrer"
                                         >
@@ -59,6 +61,37 @@ function SectionFour() {
                             </div>
                         </div>
                         <Image src={hotelpic} height={300} width={450} />
+                    </div>
+                    <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
+                        <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
+                        <div className="h-8 group bottom-0 w-full overflow-hidden  absolute hover:h-[12rem] flex items-center justify-center z-30  space-x-3 transition-all delay-150 ease-in-out">
+                            <div className="flex flex-col items-center pt-10 space-y-1 ">
+                                <div className="group-hover:hidden">
+                                    <IoIosArrowUp />
+                                </div>
+                                <div className="flex space-x-3">
+                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
+                                        <a
+                                            href="https://topbotcopier.com/"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <FaGlobeAsia />
+                                        </a>
+                                    </div>
+                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
+                                        <a
+                                            href="https://github.com/ibrahimbmohammed"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <FaGithubAlt />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <Image src={propic8} height={250} width={350} />
                     </div>
                     <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
                         <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
@@ -91,6 +124,7 @@ function SectionFour() {
                         </div>
                         <Image src={propic9} height={250} width={350} />
                     </div>
+
                     <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
                         <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
                         <div className="h-8 group bottom-0 w-full overflow-hidden  absolute hover:h-[12rem] flex items-center justify-center z-30  space-x-3 transition-all delay-150 ease-in-out">
@@ -101,38 +135,7 @@ function SectionFour() {
                                 <div className="flex space-x-3">
                                     <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
                                         <a
-                                            href="https://naughty-almeida-bd2a6a.netlify.app/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <FaGlobeAsia />
-                                        </a>
-                                    </div>
-                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
-                                        <a
-                                            href="https://github.com/ibrahimbmohammed/kanban_board"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <FaGithubAlt />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <Image src={propic8} height={250} width={350} />
-                    </div>
-                    <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
-                        <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
-                        <div className="h-8 group bottom-0 w-full overflow-hidden  absolute hover:h-[12rem] flex items-center justify-center z-30  space-x-3 transition-all delay-150 ease-in-out">
-                            <div className="flex flex-col items-center pt-10 space-y-1 ">
-                                <div className="group-hover:hidden">
-                                    <IoIosArrowUp />
-                                </div>
-                                <div className="flex space-x-3">
-                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
-                                        <a
-                                            href="https://maxsomlab-front.herokuapp.com/"
+                                            href="https://unifygiving.com/how-it-works/"
                                             target="_blank"
                                             rel="noreferrer"
                                         >
@@ -147,7 +150,39 @@ function SectionFour() {
                                 </div>
                             </div>
                         </div>
-                        <Image src={propic4} height={350} width={650} />
+                        <Image src={propic4} height={350} width={650} layout="fill" />
+                    </div>
+                    {/* <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden"> */}
+                    <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
+                        <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
+                        <div className="h-8 group bottom-0 w-full overflow-hidden  absolute hover:h-[12rem] flex items-center justify-center z-30  space-x-3 transition-all delay-150 ease-in-out">
+                            <div className="flex flex-col items-center pt-10 space-y-1 ">
+                                <div className="group-hover:hidden">
+                                    <IoIosArrowUp />
+                                </div>
+                                <div className="flex space-x-3">
+                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
+                                        <a
+                                            href="https://dazzling-llama-0a8237.netlify.app/school"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <FaGlobeAsia />
+                                        </a>
+                                    </div>
+                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
+                                        <a
+                                            href="https://github.com/ibrahimbmohammed/applypay"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <FaGithubAlt />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <Image src={propic7} height={250} width={350} />
                     </div>
                     <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
                         <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
@@ -207,37 +242,7 @@ function SectionFour() {
                         </div>
                         <Image src={propic6} height={250} width={350} />
                     </div>
-                    <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
-                        <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
-                        <div className="h-8 group bottom-0 w-full overflow-hidden  absolute hover:h-[12rem] flex items-center justify-center z-30  space-x-3 transition-all delay-150 ease-in-out">
-                            <div className="flex flex-col items-center pt-10 space-y-1 ">
-                                <div className="group-hover:hidden">
-                                    <IoIosArrowUp />
-                                </div>
-                                <div className="flex space-x-3">
-                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
-                                        <a
-                                            href="https://dazzling-llama-0a8237.netlify.app/school"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <FaGlobeAsia />
-                                        </a>
-                                    </div>
-                                    <div className="px-4 py-1 border border-white rounded-md cursor-pointer">
-                                        <a
-                                            href="https://github.com/ibrahimbmohammed/applypay"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <FaGithubAlt />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <Image src={propic7} height={250} width={350} />
-                    </div>
+
                     <div className="border border-gray-700 relative rounded-md w-[14rem] h-[8rem] md:w-[20rem] md:h-[12rem] overflow-hidden">
                         <div className="absolute z-20 w-full h-full inset-0 hover:bg-black/20 bg-black/80 transition-all delay-150 ease-in-out" />
                         <div className="h-8 group bottom-0 w-full overflow-hidden  absolute hover:h-[12rem] flex items-center justify-center z-30  space-x-3 transition-all delay-150 ease-in-out">
