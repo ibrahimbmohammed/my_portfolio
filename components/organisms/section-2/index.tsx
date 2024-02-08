@@ -49,13 +49,12 @@ function SectionTwo() {
                         </div>
                         <div className="bio w-[18rem] lg:w-[34rem] font-theme font-light">
                             <p className="text-justify leading-tight">
-                                Hello, i’m Mohammed Ibrahim B , a software Engineer with a knack for
-                                cybersecurity, my prime motivation is excellence and to excel at any
-                                task. I have an inquisitive mind, thus always seeking new adventures
-                                and challenges. I&rsquo;m not interested in only developing IT
-                                solutions, but rather developing safe IT solutions that are imbued
-                                with cyber security consciousness in both the design and
-                                implementation.
+                                Hello, i’m Mohammed Ibrahim B, An experienced front-end developer
+                                specializing in process automation and crafting scalable web
+                                applications. Proficient in leveraging technologies such as
+                                JavaScript, Typescript, React, Next, Node, and Python to seamlessly
+                                transform manual processes into efficient digital solutions.
+                                Possessing expertise in both front-end and backend technologies.
                             </p>
                         </div>
                     </div>
@@ -64,7 +63,7 @@ function SectionTwo() {
                             <div className=" rounded-md px-1 pt-[0.5rem] w-fit">
                                 <Image src={educationSvg} width={35} height={30} />
                             </div>
-                            <p className="font-semibold text-xs  ">Education</p>
+                            <p className="font-semibold text-xs">Education</p>
                             <span className="flex space-x-2 items-center font-normal text-xs  ">
                                 <p className="font-semibold text-[0.7rem]">Post Grad</p> <b>:</b>
                                 <p>Msc, Cyber Security</p>
