@@ -8,7 +8,7 @@ function SectionThree() {
     return (
         <section
             id="sectionThree"
-            className="sect h-fit w-screen overflow-hidden pb-6 xl:h-screen relative font-theme flex justify-evenly  px-4 "
+            className="sect  min-h-[60rem]  w-screen overflow-hidden pb-6 xl:h-screen relative font-theme flex justify-evenly  px-4 "
         >
             <div className="inline-block w-72 h-72   moon-bg rounded-full absolute rotate-12 " />
             <span className="inline-block  absolute -top-[8rem] left-0">
@@ -16,7 +16,7 @@ function SectionThree() {
                     EXPERIENCE
                 </h1>
             </span>
-            <div className=" w-full flex flex-col md:flex-row">
+            <div className=" w-full h-[60rem] mb-[8rem] flex flex-col md:flex-row">
                 <div className="w-full flex items-center justify-center">
                     <VerticalTimeline>
                         {Experience &&
